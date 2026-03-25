@@ -19,24 +19,33 @@ def obter_contatos():
 
 def buscar_contatos_id(id):
     try:
-
         dados = buscar_contato(id)
+
         if not dados:
             return None
-        
-        idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
-        if dados:
-            contato = {"id": dados[0],
-                       "nome": dados[1],
-                       "telefone": dados[2],
-                       "email": dados[3],
-                       "endereco": dados[4],
-                       "observacao": dados[5],
-                       "data_nascimento": dados[6],
-                       "idade": idade}
-            return contato
+
+        data_nascimento = dados.get("data_nascimento")
+
+        if data_nascimento:
+            data_formatada = data_nascimento.strftime("%Y-%m-%d")
+            idade = calcular_idade(data_formatada)
         else:
-            return None
+            data_formatada = None
+            idade = None
+
+        contato = {
+            "id": dados.get("id"),
+            "nome": dados.get("nome"),
+            "telefone": dados.get("telefone"),
+            "email": dados.get("email"),
+            "endereco": dados.get("endereco"),
+            "observacao": dados.get("observacao"),
+            "data_nascimento": data_formatada,
+            "idade": idade
+        }
+
+        return contato
+
     except Exception as e:
-        raise e
-    
+        print("Erro", e)
+        raise e 

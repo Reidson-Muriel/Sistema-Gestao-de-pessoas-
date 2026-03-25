@@ -21,7 +21,7 @@ def listar_contatos():
 
 def buscar_contato(id):
     conection = conexao.conectar()
-    cursor = conection.cursor()
+    cursor = conection.cursor(dictionary=True)
     try:
     
         cursor.execute("select id, nome, telefone, email, endereco, observacao, data_nascimento " \
@@ -47,17 +47,17 @@ def adicionar_contato(dado):
         observacao = dado.get("observacao")
 
         if not nome or not telefone:
-            return resp_erro({"Nome e telefone sao obrigatorios"}, 400)
+            return resp_erro("Nome e telefone sao obrigatorios", 400)
         
         if not validar_nome(nome):
-            return resp_erro({"Nome invalido, deve ter pelo menos 3 caracteres em letras"}, 400)
+            return resp_erro("Nome invalido, deve ter pelo menos 3 caracteres em letras", 400)
 
         
         if not validar_telefone(telefone):
-            return resp_erro({"Telefone invalido, deve conter apenas numeros de 11 digitos"}, 400)
+            return resp_erro("Telefone invalido, deve conter apenas numeros de 11 digitos", 400)
         
         if not validar_email(email):
-            return resp_erro({"Email invalido"}, 400)
+            return resp_erro("Email invalido", 400)
 
         
 
@@ -67,14 +67,13 @@ def adicionar_contato(dado):
         if existe:
             cursor.close()
             conection.close()
-            return resp_erro({"contato ja existe"}, 409)
+            return resp_erro("contato ja existe", 409)
         else:
             cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento) " \
                            "values (%s,%s,%s,%s,%s,%s)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento))
             conection.commit()
 
-            return resp_sucess({"mensagem":"Contato criado com sucesso",
-                            "nome":nome}, 201)
+            return resp_sucess("Contato criado com sucesso", 201)
     except Exception as e:
         logger.error(f"Erro ao adicionar contato: {e}")
         raise e
@@ -101,26 +100,23 @@ def atualizar_contatos(id, dado):
             data_nascimento = dado.get("nascimento", contato[5])
 
             if not validar_nome(nome):
-                return resp_erro({"Nome invalido"}, 400)
+                return resp_erro("Nome invalido", 400)
             
             if not validar_telefone(telefone_novo):
-                return resp_erro({"Telefone invalido"}, 400)
+                return resp_erro("Telefone invalido", 400)
 
             if not validar_email(email):
-                return resp_erro({"Email invalido"}, 400)
+                return resp_erro("Email invalido", 400)
             
             cursor.execute("""update contatos set nome=%s, telefone=%s, email=%s, endereco=%s, observacao=%s, data_nascimento=%s 
                            where id=%s""", (nome, telefone_novo, email, endereco, observacao, data_nascimento, id))
             conection.commit()
 
-            print(dado)
-            return resp_sucess({"mensagem":"Contato atualizado com sucesso",
-                            "nome":nome}, 200)
+            return resp_sucess("Contato atualizado com sucesso", 200)
         else:
             cursor.close()
             conection.close() 
-            print(dado)
-            return resp_erro({"Contato nao encontrado"}, 404)
+            return resp_erro("Contato nao encontrado", 404)
     except Exception as e:
         raise e
     finally:
@@ -140,9 +136,9 @@ def deletar_contatos(id):
             conection.commit()
             cursor.close()
             conection.close()
-            return resp_sucess({"mensagem":"contato deletado com sucesso"}, 200)
+            return resp_sucess("contato deletado com sucesso", 200)
         else:
-            return resp_erro({"mensagem":"Contato nao encontrado"}, 404)
+            return resp_erro("Contato nao encontrado", 404)
     except Exception as e:
         raise e
     finally:

@@ -1027,3 +1027,2147 @@ when serializing dict item 'error'
 2026-03-18 14:08:12,559 - INFO - 127.0.0.1 - - [18/Mar/2026 14:08:12] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
 2026-03-18 14:08:21,176 - INFO - 127.0.0.1 - - [18/Mar/2026 14:08:21] "[33mGET /contato/1 HTTP/1.1[0m" 404 -
 2026-03-18 14:08:30,645 - INFO - 127.0.0.1 - - [18/Mar/2026 14:08:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:31:54,773 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-03-21 14:31:54,774 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-21 14:32:30,790 - INFO - 127.0.0.1 - - [21/Mar/2026 14:32:30] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 14:32:31,244 - INFO - 127.0.0.1 - - [21/Mar/2026 14:32:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:32:48,775 - INFO - 127.0.0.1 - - [21/Mar/2026 14:32:48] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:33:03,120 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:03] "GET / HTTP/1.1" 200 -
+2026-03-21 14:33:03,269 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:03] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:33:03,292 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:03] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-21 14:33:03,874 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:03] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 14:33:08,841 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:08] "GET /cadastro HTTP/1.1" 200 -
+2026-03-21 14:33:08,866 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:08] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 14:33:08,904 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:08] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-03-21 14:33:12,468 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:12] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:33:12,510 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:12] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 14:33:12,558 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:12] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:33:15,079 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:15] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:33:39,979 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:33:40,084 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:40] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:33:56,439 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:33:56,443 - INFO - 127.0.0.1 - - [21/Mar/2026 14:33:56] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:34:12,485 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:34:12,488 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:12] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:34:21,448 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:34:21,451 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:21] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:34:25,998 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:25] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 14:34:26,048 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:34:53,038 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:53] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:34:53,090 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:53] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 14:34:53,093 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:53] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 14:34:53,128 - INFO - 127.0.0.1 - - [21/Mar/2026 14:34:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:35:00,631 - INFO - 127.0.0.1 - - [21/Mar/2026 14:35:00] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:35:17,830 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:35:17,833 - INFO - 127.0.0.1 - - [21/Mar/2026 14:35:17] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:37:12,800 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:12] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:37:12,868 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:12] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:37:12,885 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:12] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:37:12,916 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:37:13,652 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:37:15,473 - INFO - 127.0.0.1 - - [21/Mar/2026 14:37:15] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:39:05,995 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:05] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:39:06,085 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:06] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:39:06,092 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:06] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:39:06,173 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:39:07,636 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:39:10,178 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:10] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:39:29,220 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro({"Telefone invalido"}, 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:39:29,223 - INFO - 127.0.0.1 - - [21/Mar/2026 14:39:29] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:46:33,836 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:33] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:46:33,904 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:33] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:46:33,906 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:33] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:46:33,977 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:46:34,661 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:46:37,805 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:37] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:46:46,965 - ERROR - Exception on /contatos/1 [PUT]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 52, in atualizar_contato
+    return atualizar_contatos(id, dados)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 125, in atualizar_contatos
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\models\contatos_model.py", line 107, in atualizar_contatos
+    return resp_erro("Telefone invalido", 400)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 54, in atualizar_contato
+    return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-21 14:46:46,972 - INFO - 127.0.0.1 - - [21/Mar/2026 14:46:46] "[35m[1mPUT /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-21 14:47:12,861 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:12] "PUT /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:47:16,600 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:16] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:47:54,677 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:54] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:47:54,735 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:54] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:47:54,740 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:54] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:47:54,777 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:47:55,741 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:47:59,249 - INFO - 127.0.0.1 - - [21/Mar/2026 14:47:59] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:48:18,984 - INFO - 127.0.0.1 - - [21/Mar/2026 14:48:18] "PUT /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:48:20,961 - INFO - 127.0.0.1 - - [21/Mar/2026 14:48:20] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:51:37,970 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:37] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:51:38,032 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:38] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:51:38,034 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:38] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:51:38,097 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:51:38,921 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:51:41,448 - INFO - 127.0.0.1 - - [21/Mar/2026 14:51:41] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:52:00,841 - INFO - 127.0.0.1 - - [21/Mar/2026 14:52:00] "PUT /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:52:02,400 - INFO - 127.0.0.1 - - [21/Mar/2026 14:52:02] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:54:23,228 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:23] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:54:23,287 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:23] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:54:23,291 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:23] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:54:23,323 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:54:24,706 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:54:28,138 - INFO - 127.0.0.1 - - [21/Mar/2026 14:54:28] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:57:00,148 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:00] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:57:00,206 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:57:00,213 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:00] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:57:00,243 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 14:57:38,008 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:38] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:57:38,048 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:38] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:57:38,049 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:38] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:57:46,813 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:57:53,367 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:53] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:57:53,434 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:53] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:57:53,434 - INFO - 127.0.0.1 - - [21/Mar/2026 14:57:53] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:58:20,532 - INFO - 127.0.0.1 - - [21/Mar/2026 14:58:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:59:03,453 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:03] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 14:59:03,514 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:03] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 14:59:03,514 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:03] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 14:59:03,649 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 14:59:07,527 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:07] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 14:59:37,626 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:37] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 14:59:37,667 - INFO - 127.0.0.1 - - [21/Mar/2026 14:59:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:03:04,077 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:04] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:03:04,129 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:04] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:03:04,139 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:04] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:03:04,171 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:03:04,730 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:03:07,119 - INFO - 127.0.0.1 - - [21/Mar/2026 15:03:07] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:15:33,749 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:33] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:15:33,807 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:33] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:15:33,811 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:33] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:15:33,822 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:15:35,035 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:15:37,264 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:37] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:15:56,677 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:56] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:15:56,741 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:56] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:15:56,747 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:15:56,749 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:56] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:15:57,324 - INFO - 127.0.0.1 - - [21/Mar/2026 15:15:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:16:01,077 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:01] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:16:57,819 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:57] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:16:57,889 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:16:57,900 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:57] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:16:57,909 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:57] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:16:58,496 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:16:59,725 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:59] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:16:59,758 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:16:59,774 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:16:59,775 - INFO - 127.0.0.1 - - [21/Mar/2026 15:16:59] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:17:00,319 - INFO - 127.0.0.1 - - [21/Mar/2026 15:17:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:17:04,419 - INFO - 127.0.0.1 - - [21/Mar/2026 15:17:04] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:19:34,659 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:19:37,028 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "GET / HTTP/1.1" 200 -
+2026-03-21 15:19:37,067 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:19:37,078 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:19:37,080 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-21 15:19:37,312 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 15:19:37,634 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:19:40,641 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:40] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:19:40,688 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:19:40,691 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:40] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:19:40,694 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:40] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:19:44,631 - INFO - 127.0.0.1 - - [21/Mar/2026 15:19:44] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:20:43,590 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:43] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:20:43,650 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:43] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:20:43,655 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:20:43,655 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:43] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:20:44,219 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:20:46,422 - INFO - 127.0.0.1 - - [21/Mar/2026 15:20:46] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:27:40,498 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:40] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:27:40,548 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:27:40,550 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:40] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:27:40,557 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:40] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:27:41,386 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:27:42,237 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:42] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:27:42,310 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:27:42,313 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:42] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:27:42,316 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:42] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:27:42,873 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:27:46,425 - INFO - 127.0.0.1 - - [21/Mar/2026 15:27:46] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:30:59,744 - INFO - 127.0.0.1 - - [21/Mar/2026 15:30:59] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:30:59,823 - INFO - 127.0.0.1 - - [21/Mar/2026 15:30:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:30:59,830 - INFO - 127.0.0.1 - - [21/Mar/2026 15:30:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:30:59,833 - INFO - 127.0.0.1 - - [21/Mar/2026 15:30:59] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:31:00,653 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:31:02,533 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:02] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:02,586 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:02,596 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:02] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:31:02,601 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:02] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:31:03,213 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:31:05,141 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:05] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:05,188 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:05,197 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:05] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:31:05,200 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:05] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:31:08,531 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:08] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:08,574 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:08,591 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:08] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:31:08,592 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:08] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:31:11,129 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:11] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:11,186 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:11,198 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:11] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:31:11,205 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:11] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:31:43,957 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:43] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:44,032 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:44] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:31:44,039 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:44,040 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:44] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:31:44,758 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:31:45,887 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:45] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:31:45,936 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:45] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:31:45,940 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:31:45,941 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:45] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:31:46,502 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:31:49,378 - INFO - 127.0.0.1 - - [21/Mar/2026 15:31:49] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:33:07,275 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:10,068 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:10] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:33:10,109 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:10,120 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:10] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:33:10,121 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:10] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:33:12,246 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:13,254 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:13,996 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:15,209 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:15] "GET / HTTP/1.1" 200 -
+2026-03-21 15:33:15,253 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:15,261 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:15] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:33:15,264 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:15] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-03-21 15:33:15,374 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:15] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 15:33:16,514 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:16] "GET / HTTP/1.1" 200 -
+2026-03-21 15:33:16,575 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:33:16,586 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:16] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-03-21 15:33:16,587 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:16] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:33:16,725 - INFO - 127.0.0.1 - - [21/Mar/2026 15:33:16] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 15:37:16,518 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:16] "GET / HTTP/1.1" 200 -
+2026-03-21 15:37:16,593 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:16] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:37:16,609 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:37:16,617 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:16] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-21 15:37:17,017 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:17] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 15:37:17,344 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:37:18,632 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:18] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:37:18,707 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:18] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:37:18,710 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:37:18,724 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:18] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:37:21,165 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:21] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:37:21,214 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:37:21,223 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:21] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:37:21,226 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:21] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:37:26,692 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:26] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:37:26,763 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:37:26,765 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:26] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:37:26,766 - INFO - 127.0.0.1 - - [21/Mar/2026 15:37:26] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:43:39,760 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:39] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:43:39,810 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:39] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:43:39,813 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:39] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:43:39,868 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:43:40,532 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:43:42,024 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:42] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:43:42,076 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:42] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:43:42,077 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:42] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:43:42,116 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:43:42,755 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:43:44,969 - INFO - 127.0.0.1 - - [21/Mar/2026 15:43:44] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:46:46,132 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:46] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:46:46,192 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:46] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:46:46,197 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:46] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:46:46,263 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:46:47,527 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:46:50,119 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:50] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:46:50,175 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:50] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:46:50,180 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:50] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:46:50,218 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:46:50,761 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:46:52,693 - INFO - 127.0.0.1 - - [21/Mar/2026 15:46:52] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:50:06,481 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:06] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:50:06,533 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:06] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:50:06,540 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:06] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:50:06,572 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:50:07,770 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:50:10,999 - INFO - 127.0.0.1 - - [21/Mar/2026 15:50:10] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 15:54:43,469 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:43] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-21 15:54:51,935 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:51] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:54:52,001 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:52] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 15:54:52,003 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:52] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 15:54:52,046 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:54:54,699 - INFO - 127.0.0.1 - - [21/Mar/2026 15:54:54] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-21 15:56:25,751 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:25] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 15:56:25,808 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:25] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 15:56:25,811 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:25] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 15:56:25,851 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 15:56:26,652 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 15:56:28,754 - INFO - 127.0.0.1 - - [21/Mar/2026 15:56:28] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 16:04:07,359 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:07] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:04:07,413 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:07] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:04:07,416 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:07] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:04:07,449 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:04:08,492 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:04:10,435 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:10] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 16:04:32,273 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:04:35,738 - INFO - 127.0.0.1 - - [21/Mar/2026 16:04:35] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-21 16:10:52,709 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:52] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:10:52,791 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:10:52,807 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:52] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:10:52,808 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:52] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:10:53,495 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:10:54,740 - INFO - 127.0.0.1 - - [21/Mar/2026 16:10:54] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 16:11:01,089 - INFO - 127.0.0.1 - - [21/Mar/2026 16:11:01] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-21 16:13:55,166 - INFO - 127.0.0.1 - - [21/Mar/2026 16:13:55] "GET /cadastro HTTP/1.1" 200 -
+2026-03-21 16:13:55,215 - INFO - 127.0.0.1 - - [21/Mar/2026 16:13:55] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 16:13:55,221 - INFO - 127.0.0.1 - - [21/Mar/2026 16:13:55] "[36mGET /static/js/cadastro.js HTTP/1.1[0m" 304 -
+2026-03-21 16:14:51,487 - INFO - 127.0.0.1 - - [21/Mar/2026 16:14:51] "POST /contatos HTTP/1.1" 200 -
+2026-03-21 16:14:58,310 - INFO - 127.0.0.1 - - [21/Mar/2026 16:14:58] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 16:14:58,342 - INFO - 127.0.0.1 - - [21/Mar/2026 16:14:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:15:13,511 - INFO - 127.0.0.1 - - [21/Mar/2026 16:15:13] "GET /contatos HTTP/1.1" 200 -
+2026-03-21 16:15:16,422 - INFO - 127.0.0.1 - - [21/Mar/2026 16:15:16] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:15:16,464 - INFO - 127.0.0.1 - - [21/Mar/2026 16:15:16] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 16:15:16,470 - INFO - 127.0.0.1 - - [21/Mar/2026 16:15:16] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-21 16:15:21,248 - INFO - 127.0.0.1 - - [21/Mar/2026 16:15:21] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 16:16:26,093 - INFO - 127.0.0.1 - - [21/Mar/2026 16:16:26] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-21 16:16:26,134 - INFO - 127.0.0.1 - - [21/Mar/2026 16:16:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:23:05,045 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:05] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:23:05,108 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:05] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:23:05,114 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:05] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:23:05,146 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:23:06,356 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:23:08,591 - INFO - 127.0.0.1 - - [21/Mar/2026 16:23:08] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 16:26:50,736 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:50] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:26:50,803 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:26:50,819 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:50] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:26:50,825 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:50] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:26:51,695 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:26:55,934 - INFO - 127.0.0.1 - - [21/Mar/2026 16:26:55] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 16:30:17,651 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:17] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:30:17,737 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:30:17,747 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:17] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:30:17,750 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:17] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:30:18,863 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:30:22,252 - INFO - 127.0.0.1 - - [21/Mar/2026 16:30:22] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 16:36:41,205 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:41] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 16:36:41,257 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 16:36:41,273 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:41] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 16:36:41,277 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:41] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 16:36:41,854 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 16:36:43,914 - INFO - 127.0.0.1 - - [21/Mar/2026 16:36:43] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 17:32:16,484 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:16] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 17:32:16,550 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 17:32:16,561 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:16] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 17:32:16,562 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:16] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 17:32:17,167 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 17:32:20,677 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:20] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-21 17:32:38,238 - INFO - 127.0.0.1 - - [21/Mar/2026 17:32:38] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-21 17:33:59,944 - INFO - 127.0.0.1 - - [21/Mar/2026 17:33:59] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 17:34:00,016 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 17:34:00,021 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:00] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 17:34:00,038 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 17:34:00,953 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 17:34:01,840 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:01] "GET /buscar HTTP/1.1" 200 -
+2026-03-21 17:34:01,885 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-21 17:34:01,903 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:01] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-21 17:34:01,903 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:01] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-21 17:34:02,593 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-21 17:34:05,590 - INFO - 127.0.0.1 - - [21/Mar/2026 17:34:05] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-22 17:33:43,801 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-03-22 17:33:43,802 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-22 17:34:08,032 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:08] "GET /contatos HTTP/1.1" 200 -
+2026-03-22 17:34:08,471 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:34:14,966 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:14] "GET / HTTP/1.1" 200 -
+2026-03-22 17:34:15,126 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:15] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:34:15,141 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:15] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-03-22 17:34:15,205 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:15] "GET /contatos HTTP/1.1" 200 -
+2026-03-22 17:34:21,085 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:21] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:34:21,133 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:21] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:34:21,194 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:21] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-22 17:34:23,471 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:23,574 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:23] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:34:29,924 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:29] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:34:29,966 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:29] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:34:29,973 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:29] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-22 17:34:32,011 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:32,013 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:32] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:34:35,098 - ERROR - Exception on /contatos/2 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:35,103 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:35] "[35m[1mGET /contatos/2 HTTP/1.1[0m" 500 -
+2026-03-22 17:34:38,348 - ERROR - Exception on /contatos/3 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:38,352 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:38] "[35m[1mGET /contatos/3 HTTP/1.1[0m" 500 -
+2026-03-22 17:34:41,253 - ERROR - Exception on /contatos/4 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:41,257 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:41] "[35m[1mGET /contatos/4 HTTP/1.1[0m" 500 -
+2026-03-22 17:34:44,830 - ERROR - Exception on /contatos/5 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:34:44,833 - INFO - 127.0.0.1 - - [22/Mar/2026 17:34:44] "[35m[1mGET /contatos/5 HTTP/1.1[0m" 500 -
+2026-03-22 17:35:31,707 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:31] "GET / HTTP/1.1" 200 -
+2026-03-22 17:35:31,771 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:31] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:35:31,774 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:31] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-22 17:35:32,396 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:32] "GET /contatos HTTP/1.1" 200 -
+2026-03-22 17:35:32,458 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:35:33,125 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:33] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:35:33,178 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:33] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:35:33,181 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:33] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-03-22 17:35:34,925 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:35:34,927 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:34] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:35:46,088 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:46] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:35:46,118 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:46] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:35:46,121 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:46] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:35:46,355 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:35:48,690 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    raise e
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    idade = calcular_idade(dados[6].strftime("%Y-%m-%d")) if dados[6] else None
+                                                             ~~~~~^^^
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:35:48,692 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:48] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:35:52,306 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:52] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:35:52,322 - INFO - 127.0.0.1 - - [22/Mar/2026 17:35:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:49:17,626 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:17] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:49:17,677 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:17] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:49:17,679 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:17] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:49:18,303 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:49:19,781 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "observacao": dados[5],
+    
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:49:19,786 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:19] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:49:23,545 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:23] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-22 17:49:23,585 - INFO - 127.0.0.1 - - [22/Mar/2026 17:49:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:50:01,967 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:01] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:50:02,022 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:50:02,037 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:02] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:50:02,050 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:02] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:50:02,829 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:50:04,119 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:04] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:50:04,153 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:50:04,174 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:04] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:50:04,175 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:04] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:50:04,751 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:50:07,807 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "observacao": dados[5],
+    
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:50:07,813 - INFO - 127.0.0.1 - - [22/Mar/2026 17:50:07] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:54:09,264 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:09] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:54:09,312 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:09] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:54:09,314 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:09] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:54:09,326 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:54:09,913 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:54:13,591 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:13] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:54:13,633 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:54:13,650 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:13] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:54:13,650 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:13] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:54:14,187 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:54:19,348 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "observacao": dados[5],
+    
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados.get("data_nascimento")
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:54:19,353 - INFO - 127.0.0.1 - - [22/Mar/2026 17:54:19] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 17:56:56,787 - INFO - 127.0.0.1 - - [22/Mar/2026 17:56:56] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 17:56:56,832 - INFO - 127.0.0.1 - - [22/Mar/2026 17:56:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 17:56:56,846 - INFO - 127.0.0.1 - - [22/Mar/2026 17:56:56] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 17:56:56,854 - INFO - 127.0.0.1 - - [22/Mar/2026 17:56:56] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 17:56:57,544 - INFO - 127.0.0.1 - - [22/Mar/2026 17:56:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 17:57:00,105 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "nome": dados[1],
+    
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 17:57:00,109 - INFO - 127.0.0.1 - - [22/Mar/2026 17:57:00] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:03:35,610 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:35] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:03:35,659 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:03:35,672 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:35] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:03:35,673 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:35] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:03:36,437 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:03:37,789 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "id": dados.get("id"),
+    
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:03:37,794 - INFO - 127.0.0.1 - - [22/Mar/2026 18:03:37] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:17:24,906 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:24] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:17:24,957 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:17:24,972 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:24] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:17:24,974 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:24] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:17:26,165 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:17:26,725 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:26] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:17:26,785 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:17:26,799 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:26] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:17:26,800 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:26] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:17:27,686 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:17:29,190 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "endereco": dados[4],
+    ^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:17:29,197 - INFO - 127.0.0.1 - - [22/Mar/2026 18:17:29] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:28:28,191 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:28] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:28:28,239 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:28:28,292 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:28] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:28:28,297 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:28] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:28:28,876 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:28:30,948 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "endereco": dados[4],
+    ^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro("Erro ao buscar contato " + str(e), 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:28:30,951 - INFO - 127.0.0.1 - - [22/Mar/2026 18:28:30] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:29:31,601 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:31] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:29:31,659 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:29:31,677 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:31] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:29:31,679 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:31] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:29:32,330 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:29:34,085 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:34] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:29:34,125 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:29:34,139 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:34] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:29:34,139 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:34] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:29:34,680 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:29:36,180 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "endereco": dados.get("endereco"),
+    ^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados.get("data_nascimento")
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro("Erro ao buscar contato " + str(e), 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:29:36,185 - INFO - 127.0.0.1 - - [22/Mar/2026 18:29:36] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:36:01,073 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:01] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:36:01,124 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:36:01,146 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:01] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:36:01,147 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:01] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:36:01,738 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:36:03,897 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "endereco": dados[4],
+    ^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro("Erro ao buscar contato " + str(e), 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:36:03,903 - INFO - 127.0.0.1 - - [22/Mar/2026 18:36:03] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-22 18:39:14,780 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:14] "GET /buscar HTTP/1.1" 200 -
+2026-03-22 18:39:14,853 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-22 18:39:14,875 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-22 18:39:14,877 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:14] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-22 18:39:15,542 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-22 18:39:16,874 - ERROR - Exception on /contatos/1 [GET]
+Traceback (most recent call last):
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 23, in get_contato_id
+    buscar = buscar_contatos_id(id)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 41, in buscar_contatos_id
+    "endereco": dados[4],
+    ^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\services\contatos_services.py", line 27, in buscar_contatos_id
+    data_nascimento = dados[6]
+    
+KeyError: 6
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\contatos_routes.py", line 29, in get_contato_id
+    return resp_erro("Erro ao buscar contato " + str(e), 500)
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\utils\response.py", line 11, in resp_erro
+    return jsonify({
+           ~~~~~~~^^
+        "success": False,
+        ^^^^^^^^^^^^^^^^^
+        "error": error
+        ^^^^^^^^^^^^^^
+    }), status
+    ^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\json\provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type set is not JSON serializable
+when serializing dict item 'error'
+2026-03-22 18:39:16,879 - INFO - 127.0.0.1 - - [22/Mar/2026 18:39:16] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-25 11:06:52,841 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-03-25 11:06:52,842 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-25 11:07:08,807 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:08] "GET /contatos HTTP/1.1" 200 -
+2026-03-25 11:07:09,452 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-25 11:07:11,485 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:11] "GET / HTTP/1.1" 200 -
+2026-03-25 11:07:11,624 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:11] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-25 11:07:11,647 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:11] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-25 11:07:12,286 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:12] "GET /contatos HTTP/1.1" 200 -
+2026-03-25 11:07:14,455 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:14] "GET /cadastro HTTP/1.1" 200 -
+2026-03-25 11:07:14,483 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:14] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 11:07:14,537 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:14] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-03-25 11:07:17,337 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:17] "GET /buscar HTTP/1.1" 200 -
+2026-03-25 11:07:17,371 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:17] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 11:07:17,373 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:17] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-25 11:07:19,112 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:19] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-25 11:07:22,692 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:22] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 11:07:22,750 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-25 11:07:51,476 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:51] "GET /buscar HTTP/1.1" 200 -
+2026-03-25 11:07:51,559 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-25 11:07:51,571 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:51] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-25 11:07:51,579 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:51] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-25 11:07:52,531 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-25 11:07:55,408 - INFO - 127.0.0.1 - - [25/Mar/2026 11:07:55] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-25 11:08:00,432 - INFO - 127.0.0.1 - - [25/Mar/2026 11:08:00] "[35m[1mGET /contatos/5 HTTP/1.1[0m" 500 -
+2026-03-25 11:14:22,385 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:22] "GET /buscar HTTP/1.1" 200 -
+2026-03-25 11:14:22,467 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:22] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-25 11:14:22,470 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:22] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-25 11:14:22,733 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-25 11:14:23,275 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-25 11:14:25,311 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:25] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-25 11:14:46,130 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:46] "GET /buscar HTTP/1.1" 200 -
+2026-03-25 11:14:46,216 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:46] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-25 11:14:46,217 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:46] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-25 11:14:46,307 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-03-25 11:14:47,137 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-25 11:14:51,114 - INFO - 127.0.0.1 - - [25/Mar/2026 11:14:51] "[35m[1mGET /contatos/1 HTTP/1.1[0m" 500 -
+2026-03-25 12:35:01,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-03-25 12:35:01,023 - INFO - [33mPress CTRL+C to quit[0m
+2026-03-25 12:35:02,839 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:02] "GET / HTTP/1.1" 200 -
+2026-03-25 12:35:02,984 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:02] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-03-25 12:35:03,003 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:03] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-03-25 12:35:03,221 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:03] "GET /contatos HTTP/1.1" 200 -
+2026-03-25 12:35:03,555 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-25 12:35:05,261 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:05] "GET /buscar HTTP/1.1" 200 -
+2026-03-25 12:35:05,296 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:05] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 12:35:05,348 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:05] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-03-25 12:35:07,001 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:07] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-25 12:35:30,582 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:30] "PUT /contatos/1 HTTP/1.1" 200 -
+2026-03-25 12:35:32,379 - INFO - 127.0.0.1 - - [25/Mar/2026 12:35:32] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-25 12:45:22,963 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:22] "GET /contatos/4 HTTP/1.1" 200 -
+2026-03-25 12:45:24,492 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:24] "GET /contatos/3 HTTP/1.1" 200 -
+2026-03-25 12:45:25,598 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:25] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-25 12:45:26,514 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:26] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-25 12:45:30,119 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:30] "GET /contatos/1 HTTP/1.1" 200 -
+2026-03-25 12:45:34,726 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:34] "GET /contatos/2 HTTP/1.1" 200 -
+2026-03-25 12:45:36,086 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:36] "GET /contatos/3 HTTP/1.1" 200 -
+2026-03-25 12:45:36,805 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:36] "GET /contatos/4 HTTP/1.1" 200 -
+2026-03-25 12:45:38,635 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:38] "[33mGET /contatos/6 HTTP/1.1[0m" 404 -
+2026-03-25 12:45:42,686 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:42] "GET /contatos/5 HTTP/1.1" 200 -
+2026-03-25 12:45:44,498 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:44] "DELETE /contatos/5 HTTP/1.1" 200 -
+2026-03-25 12:45:50,042 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:50] "[33mGET /contatos/5 HTTP/1.1[0m" 404 -
+2026-03-25 12:45:56,728 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:56] "GET / HTTP/1.1" 200 -
+2026-03-25 12:45:56,775 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:56] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 12:45:56,805 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:56] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-03-25 12:45:56,888 - INFO - 127.0.0.1 - - [25/Mar/2026 12:45:56] "GET /contatos HTTP/1.1" 200 -
+2026-03-25 12:46:04,909 - INFO - 127.0.0.1 - - [25/Mar/2026 12:46:04] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-03-25 12:46:04,951 - INFO - 127.0.0.1 - - [25/Mar/2026 12:46:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -

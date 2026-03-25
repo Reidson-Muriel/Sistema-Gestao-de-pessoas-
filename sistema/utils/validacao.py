@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+from datetime import datetime, date
 
 def validar_nome(nome):
     if not nome or len(nome.strip()) < 3:
@@ -41,15 +41,16 @@ def validar_email(email):
     else:
         return False
     
-def calcular_idade(nascimento):
+def calcular_idade(nascimento:date):
     if not nascimento:
         return None
     try:
-        data_nasc = datetime.strptime(nascimento, "%Y-%m-%d").date()
-        atual = datetime.now()
-        idade = atual.year - data_nasc.year
-        if (atual.month, atual.day) < (data_nasc.month, data_nasc.day):
+        if(isinstance(nascimento, str)):
+            nascimento = datetime.strptime(nascimento, "%Y-%m-%d").date()
+        atual = date.today()
+        idade = atual.year - nascimento.year
+        if (atual.month, atual.day) < (nascimento.month, nascimento.day):
             idade -=1
         return idade
-    except:
+    except Exception:
         return None

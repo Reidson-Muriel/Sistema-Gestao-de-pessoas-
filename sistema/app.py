@@ -2,7 +2,10 @@ import os
 from flask import Flask, render_template
 from flask_cors import CORS
 from sistema.routes.contatos_routes import contato_bp
+from sistema.database import conexao
+
 app = Flask(__name__, template_folder="templates", static_folder="static")
+conexao.criar_tabela()
 CORS(app)
 app.register_blueprint(contato_bp)
 
@@ -15,8 +18,6 @@ def buscar():
 @app.route("/cadastro")
 def cadastro():
     return render_template("cadastro.html")
-
-
     
 ## rota para exercutar no dispositivo moveis
 if __name__ == "__main__":

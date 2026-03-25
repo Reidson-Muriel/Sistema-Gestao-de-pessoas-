@@ -13,9 +13,9 @@ def get_contato():
         if contato:
             return resp_sucess(contato, 200)
         else:
-            return resp_erro({"Nenhum contato encontrado"}, 404)
+            return resp_erro("Nenhum contato encontrado", 404)
     except Exception as e:
-        return resp_erro({"Erro ao buscar contatos " + str(e)}, 500)
+        return resp_erro("Erro ao buscar contatos " + str(e), 500)
 # rotas para contato pelo id mostrar unico contatos
 @contato_bp.route("/contatos/<int:id>", methods=["GET"])
 def get_contato_id(id):
@@ -24,9 +24,9 @@ def get_contato_id(id):
         if buscar:
             return resp_sucess(buscar, 200)
         else:
-            return resp_erro({"Contato nao encontrado"}, 404)
+            return resp_erro("Contato nao encontrado", 404)
     except Exception as e:
-        return resp_erro({"Erro ao buscar contato " + str(e)}, 500)
+        return resp_erro("Erro ao buscar contato " + str(e), 500)
 # criar rota para adicionar contato read
 @contato_bp.route("/contatos", methods=["POST"])
 def criar_contato():
@@ -34,11 +34,11 @@ def criar_contato():
         dados = request.get_json()
 
         if not dados:
-            return resp_erro({"dados invalidos"}, 400)
+            return resp_erro("dados invalidos", 400)
 
         return adicionar_contato(dados)
     except Exception as e:
-        return resp_erro({"Erro ao criar contato " + str(e)}, 500)
+        return resp_erro("Erro ao criar contato " + str(e), 500)
      
 #rota para atualizar o contato read/update
 @contato_bp.route("/contatos/<int:id>", methods=["PUT"])
@@ -47,11 +47,11 @@ def atualizar_contato(id):
         dados = request.get_json(silent=True)
 
         if not dados:
-            return resp_erro({"dados invalidos"}, 400)
+            return resp_erro("dados invalidos", 400)
 
         return atualizar_contatos(id, dados)
     except Exception as e:
-        return resp_erro({"Erro ao atualizar contato " + str(e)}, 500)
+        return resp_erro("Erro ao atualizar contato " + str(e), 500)
 
 # rota para deletar o contato delete 
 @contato_bp.route("/contatos/<int:id>", methods=["DELETE"])
@@ -59,4 +59,4 @@ def deletar_contato(id):
     try:
         return deletar_contatos(id)
     except Exception as erro:
-        return resp_erro({"Erro ao deletar o contato" + str(erro)}, 500)
+        return resp_erro("Erro ao deletar o contato" + str(erro), 500)
