@@ -42,7 +42,7 @@ def validar_email(email):
         return False
     
 def calcular_idade(nascimento:date):
-    if not nascimento:
+    if not nascimento:  
         return None
     try:
         if(isinstance(nascimento, str)):

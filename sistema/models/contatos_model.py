@@ -97,7 +97,7 @@ def atualizar_contatos(id, dado):
             email = dado.get("email", contato[2])
             endereco = dado.get("endereco", contato[3])
             observacao = dado.get("observacao", contato[4])
-            data_nascimento = dado.get("nascimento", contato[5])
+            data_nascimento = dado.get("data_nascimento", contato[5])
 
             if not validar_nome(nome):
                 return resp_erro("Nome invalido", 400)

@@ -1,5 +1,6 @@
 from sistema.models.contatos_model import listar_contatos, buscar_contato
 from sistema.utils.response import resp_erro
+from sistema.utils.logger import logger
 from datetime import datetime
 
 from ..utils.validacao import calcular_idade
@@ -25,13 +26,12 @@ def buscar_contatos_id(id):
             return None
 
         data_nascimento = dados[6]
-
-        if data_nascimento:
-            data_formatada = data_nascimento
-            idade = calcular_idade(data_formatada)
-        else:
+        if not data_nascimento:
             data_formatada = None
             idade = None
+        else:
+            data_formatada = data_nascimento
+            idade = calcular_idade(data_formatada)
 
         contato = {
             "id": dados[0],
@@ -47,5 +47,5 @@ def buscar_contatos_id(id):
         return contato
 
     except Exception as e:
-        print("Erro", e)
-        raise e 
+        logger.error(f"Erro ao buscar contato: {e}")
+        resp_erro("Erro interno ao processar o contato")
