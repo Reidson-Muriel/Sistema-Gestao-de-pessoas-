@@ -24,22 +24,22 @@ def buscar_contatos_id(id):
         if not dados:
             return None
 
-        data_nascimento = dados.get("data_nascimento")
+        data_nascimento = dados[6]
 
         if data_nascimento:
-            data_formatada = data_nascimento.strftime("%Y-%m-%d")
+            data_formatada = data_nascimento
             idade = calcular_idade(data_formatada)
         else:
             data_formatada = None
             idade = None
 
         contato = {
-            "id": dados.get("id"),
-            "nome": dados.get("nome"),
-            "telefone": dados.get("telefone"),
-            "email": dados.get("email"),
-            "endereco": dados.get("endereco"),
-            "observacao": dados.get("observacao"),
+            "id": dados[0],
+            "nome": dados[1],
+            "telefone": dados[2],
+            "email": dados[3],
+            "endereco": dados[4],
+            "observacao": dados[5],
             "data_nascimento": data_formatada,
             "idade": idade
         }

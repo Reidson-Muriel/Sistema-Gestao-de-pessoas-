@@ -1,13 +1,7 @@
-import mysql.connector
-import os
+import sqlite3
 def conectar():
-    print("conectando no local")
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="reidson_10",
-        database="agenda"
-    )
+    print("conectando no sqlite")
+    return sqlite3.connect("agenda.db")
 
 def criar_tabela():
     conn = conectar()
@@ -15,12 +9,12 @@ def criar_tabela():
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS contatos (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR(100),
-        nascimento DATE,
-        telefone VARCHAR(20),
-        email VARCHAR(100),
-        endereco VARCHAR(255),
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT,
+        data_nascimento TEXT,
+        telefone TEXT,
+        email TEXT,
+        endereco TEXT,
         observacao TEXT
     )
     """)

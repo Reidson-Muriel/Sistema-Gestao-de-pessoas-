@@ -21,11 +21,11 @@ def listar_contatos():
 
 def buscar_contato(id):
     conection = conexao.conectar()
-    cursor = conection.cursor(dictionary=True)
+    cursor = conection.cursor()
     try:
     
         cursor.execute("select id, nome, telefone, email, endereco, observacao, data_nascimento " \
-                        "from contatos where id = %s", (id,))
+                        "from contatos where id = ? ", (id,))
         dados = cursor.fetchone()
     
         return dados
@@ -40,7 +40,7 @@ def adicionar_contato(dado):
     cursor = conection.cursor()
     try:
         nome = dado.get("nome") 
-        data_nascimento =  dado.get("nascimento")
+        data_nascimento =  dado.get("data_nascimento")
         telefone = dado.get("telefone")
         email =  dado.get("email")
         endereco = dado.get("endereco")
@@ -62,7 +62,7 @@ def adicionar_contato(dado):
         
 
 
-        cursor.execute("select id from contatos where telefone=%s", (telefone,))#evitar o telefone duplas
+        cursor.execute("select id from contatos where telefone= ?", (telefone,))#evitar o telefone duplas
         existe = cursor.fetchone()
         if existe:
             cursor.close()
@@ -70,7 +70,7 @@ def adicionar_contato(dado):
             return resp_erro("contato ja existe", 409)
         else:
             cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento) " \
-                           "values (%s,%s,%s,%s,%s,%s)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento))
+                           "values (?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento))
             conection.commit()
 
             return resp_sucess("Contato criado com sucesso", 201)
@@ -88,7 +88,7 @@ def atualizar_contatos(id, dado):
     try:
 
         cursor.execute("""select nome, telefone, email, endereco, observacao, data_nascimento from contatos
-                       where id=%s""", (id,))
+                       where id=?""", (id,))
 
         contato = cursor.fetchone()
         if contato:
@@ -108,8 +108,8 @@ def atualizar_contatos(id, dado):
             if not validar_email(email):
                 return resp_erro("Email invalido", 400)
             
-            cursor.execute("""update contatos set nome=%s, telefone=%s, email=%s, endereco=%s, observacao=%s, data_nascimento=%s 
-                           where id=%s""", (nome, telefone_novo, email, endereco, observacao, data_nascimento, id))
+            cursor.execute("""update contatos set nome=?, telefone=?, email=?, endereco=?, observacao=?, data_nascimento=? 
+                           where id=?""", (nome, telefone_novo, email, endereco, observacao, data_nascimento, id))
             conection.commit()
 
             return resp_sucess("Contato atualizado com sucesso", 200)
@@ -128,11 +128,11 @@ def deletar_contatos(id):
     cursor = conection.cursor()
     try:
 
-        cursor.execute("select id from contatos where id=%s", (id,))
+        cursor.execute("select id from contatos where id=?", (id,))
         existe = cursor.fetchone()
 
         if existe:
-            cursor.execute("delete from contatos where id=%s", (id,))
+            cursor.execute("delete from contatos where id=?", (id,))
             conection.commit()
             cursor.close()
             conection.close()
