@@ -36,18 +36,21 @@ def buscar_contato(id):
         conection.close()
 
 def adicionar_contato(dado):
+
+
     conection = conexao.conectar()
     cursor = conection.cursor()
     try:
         nome = dado.get("nome") 
-        data_nascimento =  dado.get("data_nascimento")
         telefone = dado.get("telefone")
         email =  dado.get("email")
         endereco = dado.get("endereco")
         observacao = dado.get("observacao")
+        data_nascimento =  dado.get("data_nascimento")
 
         if not nome or not telefone:
             return resp_erro("Nome e telefone sao obrigatorios", 400)
+        
         
         if not validar_nome(nome):
             return resp_erro("Nome invalido, deve ter pelo menos 3 caracteres em letras", 400)
@@ -73,7 +76,8 @@ def adicionar_contato(dado):
                            "values (?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento))
             conection.commit()
 
-            return resp_sucess("Contato criado com sucesso", 201)
+        return resp_sucess(message="Contato criado com sucesso", status=201)
+    
     except Exception as e:
         logger.error(f"Erro ao adicionar contato: {e}")
         raise e

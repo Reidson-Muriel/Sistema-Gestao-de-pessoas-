@@ -32,7 +32,6 @@ def get_contato_id(id):
 def criar_contato():
     try:
         dados = request.get_json()
-
         if not dados:
             return resp_erro("dados invalidos", 400)
 

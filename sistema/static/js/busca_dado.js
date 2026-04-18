@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ nome, nascimento, telefone, email, endereco, observacao })
+            body: JSON.stringify({ nome, data_nascimento:nascimento, telefone, email, endereco, observacao })
         });
 
         if (!resposta.ok) {

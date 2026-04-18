@@ -5,12 +5,9 @@ async function listarContatos() {
     const resposta = await fetch(api_url);
     const resultado = await resposta.json(); 
 
-    console.log("contato recebido:", resultado);
-
     const contatos = resultado.data;
 
     if(!Array.isArray(contatos)){
-        console.error("Dados nao e array:", contatos);
         return;
     }
     const tbody = document.getElementById("lista_contato");

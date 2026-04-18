@@ -15,13 +15,10 @@ document.getElementById("form_contato").addEventListener("submit", async (e) =>{
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({nome, nascimento, telefone, email, endereco, observacao})
+        body: JSON.stringify({nome, data_nascimento:nascimento, telefone, email, endereco, observacao})
         });
 
         const resultado = await resposta.json();
-            console.log("Resposta API:", resultado);
-            console.log("Status:", resposta.status);
-
         if (!resposta.ok){
             alert(resultado.error);
             return;  

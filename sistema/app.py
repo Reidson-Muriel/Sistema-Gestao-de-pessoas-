@@ -2,10 +2,11 @@ import os
 from flask import Flask, render_template
 from flask_cors import CORS
 from sistema.routes.contatos_routes import contato_bp
-from sistema.database import conexao
+from sistema.database.conexao import criar_tabela, conectar
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
-conexao.criar_tabela()
+conn = conectar()
+criar_tabela(conn)
 CORS(app)
 app.register_blueprint(contato_bp)
 
@@ -22,4 +23,4 @@ def cadastro():
 ## rota para exercutar no dispositivo moveis
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port) 
+    app.run(host="0.0.0.0", port=port, debug=False) 
