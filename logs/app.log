@@ -4006,3 +4006,1413 @@ when serializing dict item 'error'
 2026-04-18 13:30:59,468 - INFO - 127.0.0.1 - - [18/Apr/2026 13:30:59] "[36mGET /static/js/cadastro.js HTTP/1.1[0m" 304 -
 2026-04-18 13:31:37,501 - INFO - 127.0.0.1 - - [18/Apr/2026 13:31:37] "[35m[1mPOST /contatos HTTP/1.1[0m" 201 -
 2026-04-18 13:31:39,944 - INFO - 127.0.0.1 - - [18/Apr/2026 13:31:39] "GET /contatos HTTP/1.1" 200 -
+2026-04-18 20:12:09,486 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:12:09,487 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:12:20,272 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:20] "GET / HTTP/1.1" 200 -
+2026-04-18 20:12:20,377 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:20] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:12:20,399 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:20] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:12:20,405 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:20] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:12:26,833 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:26] "GET / HTTP/1.1" 200 -
+2026-04-18 20:12:26,850 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:26] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:12:26,866 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:26] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:12:26,898 - INFO - 127.0.0.1 - - [18/Apr/2026 20:12:26] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:14:40,921 - INFO - 127.0.0.1 - - [18/Apr/2026 20:14:40] "[33mGET /cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:18:05,674 - INFO - 127.0.0.1 - - [18/Apr/2026 20:18:05] "[33mPOST /cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:19:20,919 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:20] "[33mPOST /cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:19:40,836 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:40] "GET / HTTP/1.1" 200 -
+2026-04-18 20:19:40,853 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:40] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:19:40,867 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:40] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:19:40,904 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:40] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:19:41,771 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:41] "GET / HTTP/1.1" 200 -
+2026-04-18 20:19:41,786 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:41] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:19:41,787 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:41] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:19:41,831 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:41] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:19:42,442 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:42] "GET / HTTP/1.1" 200 -
+2026-04-18 20:19:42,457 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:42] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:19:42,470 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:42] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:19:42,512 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:42] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:19:43,101 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:43] "GET / HTTP/1.1" 200 -
+2026-04-18 20:19:43,131 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:43] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-18 20:19:43,144 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:43] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-18 20:19:43,164 - INFO - 127.0.0.1 - - [18/Apr/2026 20:19:43] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-18 20:20:08,134 - INFO - 127.0.0.1 - - [18/Apr/2026 20:20:08] "[33mPOST /cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:23:18,209 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:23:18,210 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:23:29,728 - INFO - 127.0.0.1 - - [18/Apr/2026 20:23:29] "[31m[1mGET /cadastro-usuario HTTP/1.1[0m" 405 -
+2026-04-18 20:23:31,754 - INFO - 127.0.0.1 - - [18/Apr/2026 20:23:31] "[31m[1mGET /cadastro-usuario HTTP/1.1[0m" 405 -
+2026-04-18 20:23:45,612 - INFO - 127.0.0.1 - - [18/Apr/2026 20:23:45] "[31m[1mPOST /cadastro-usuario HTTP/1.1[0m" 415 -
+2026-04-18 20:24:13,762 - ERROR - Exception on /cadastro-usuario [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute(""" INSERT INTO  usuario (username, password), values (?,?), (username, password)""")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: near ",": syntax error
+2026-04-18 20:24:13,788 - INFO - 127.0.0.1 - - [18/Apr/2026 20:24:13] "[35m[1mPOST /cadastro-usuario HTTP/1.1[0m" 500 -
+2026-04-18 20:24:26,560 - ERROR - Exception on /cadastro-usuario [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute(""" INSERT INTO  usuario (username, password), values (?,?), (username, password)""")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: near ",": syntax error
+2026-04-18 20:24:26,562 - INFO - 127.0.0.1 - - [18/Apr/2026 20:24:26] "[35m[1mPOST /cadastro-usuario HTTP/1.1[0m" 500 -
+2026-04-18 20:24:47,998 - INFO - 127.0.0.1 - - [18/Apr/2026 20:24:47] "[33mGET /contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:25:46,775 - INFO - 127.0.0.1 - - [18/Apr/2026 20:25:46] "[33mPOST /usuario/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:26:07,682 - INFO - 127.0.0.1 - - [18/Apr/2026 20:26:07] "[33mGET /usuario/contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:32:01,680 - INFO - 127.0.0.1 - - [18/Apr/2026 20:32:01] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:35:51,525 - INFO - 127.0.0.1 - - [18/Apr/2026 20:35:51] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:36:04,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:36:04,905 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:36:07,057 - INFO - 127.0.0.1 - - [18/Apr/2026 20:36:07] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:36:15,898 - INFO - 127.0.0.1 - - [18/Apr/2026 20:36:15] "[33mGET /usuarios/contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:39:52,000 - INFO - 127.0.0.1 - - [18/Apr/2026 20:39:52] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:39:59,981 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:39:59,981 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:40:01,887 - INFO - 127.0.0.1 - - [18/Apr/2026 20:40:01] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:40:10,765 - INFO - 127.0.0.1 - - [18/Apr/2026 20:40:10] "[33mGET /usuarios/contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:40:11,763 - INFO - 127.0.0.1 - - [18/Apr/2026 20:40:11] "[33mGET /usuarios/contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:40:12,218 - INFO - 127.0.0.1 - - [18/Apr/2026 20:40:12] "[33mGET /usuarios/contato-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:40:46,416 - INFO - 127.0.0.1 - - [18/Apr/2026 20:40:46] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:40:56,945 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:40:56,945 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:41:00,850 - INFO - 127.0.0.1 - - [18/Apr/2026 20:41:00] "[33mPOST /usuarios/cadastro-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:41:13,045 - INFO - 127.0.0.1 - - [18/Apr/2026 20:41:13] "[33mGET /usuarios/contatos-usuario HTTP/1.1[0m" 404 -
+2026-04-18 20:41:20,747 - INFO - 127.0.0.1 - - [18/Apr/2026 20:41:20] "[33mPOST /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-18 20:42:08,193 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-18 20:42:08,193 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-18 20:42:12,398 - INFO - 127.0.0.1 - - [18/Apr/2026 20:42:12] "[33mPOST /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-18 20:42:31,279 - INFO - 127.0.0.1 - - [18/Apr/2026 20:42:31] "[33mPOST /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-18 20:42:46,790 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-18 20:42:46,793 - INFO - 127.0.0.1 - - [18/Apr/2026 20:42:46] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:41:36,573 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-20 20:41:36,575 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-20 20:42:09,934 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:09] "[33mGET /usuarios/contatos-usuario HTTP/1.1[0m" 404 -
+2026-04-20 20:42:10,645 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-20 20:42:15,659 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:15] "GET / HTTP/1.1" 200 -
+2026-04-20 20:42:15,802 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:15] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-04-20 20:42:16,511 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:16] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-04-20 20:42:16,675 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:16] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-20 20:42:23,826 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:23] "[31m[1mGET /cadastro-usuarios HTTP/1.1[0m" 405 -
+2026-04-20 20:42:49,397 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:49] "[33mGET /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-20 20:42:57,579 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:57] "GET / HTTP/1.1" 200 -
+2026-04-20 20:42:57,613 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:57] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-20 20:42:57,687 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:57] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-20 20:42:57,706 - INFO - 127.0.0.1 - - [20/Apr/2026 20:42:57] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-20 20:43:49,777 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:43:49,808 - INFO - 127.0.0.1 - - [20/Apr/2026 20:43:49] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:44:14,453 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:44:14,468 - INFO - 127.0.0.1 - - [20/Apr/2026 20:44:14] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:44:43,689 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-20 20:44:43,689 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-20 20:44:45,331 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:44:45,339 - INFO - 127.0.0.1 - - [20/Apr/2026 20:44:45] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:50:39,433 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:50:39,436 - INFO - 127.0.0.1 - - [20/Apr/2026 20:50:39] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:50:45,069 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:50:45,074 - INFO - 127.0.0.1 - - [20/Apr/2026 20:50:45] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:51:20,193 - INFO - 127.0.0.1 - - [20/Apr/2026 20:51:20] "[33mPOST /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-20 20:51:38,949 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:51:38,951 - INFO - 127.0.0.1 - - [20/Apr/2026 20:51:38] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:52:23,890 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-20 20:52:23,891 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-20 20:52:27,167 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:52:27,174 - INFO - 127.0.0.1 - - [20/Apr/2026 20:52:27] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:52:40,525 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:52:40,527 - INFO - 127.0.0.1 - - [20/Apr/2026 20:52:40] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:53:15,829 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 16, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: usuario
+2026-04-20 20:53:15,831 - INFO - 127.0.0.1 - - [20/Apr/2026 20:53:15] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-20 20:55:19,798 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-20 20:55:19,799 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-20 20:55:21,971 - INFO - 127.0.0.1 - - [20/Apr/2026 20:55:21] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-04-20 21:05:30,568 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-04-20 21:05:30,569 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-20 21:05:35,170 - INFO - 127.0.0.1 - - [20/Apr/2026 21:05:35] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-04-22 20:12:14,302 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-22 20:12:14,306 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-22 20:12:32,310 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:32] "[33mGET /usuarios/cadastro-usuarios HTTP/1.1[0m" 404 -
+2026-04-22 20:12:33,111 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-22 20:12:42,663 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:42] "[31m[1mGET /cadastro-usuarios HTTP/1.1[0m" 405 -
+2026-04-22 20:12:55,510 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:55] "GET / HTTP/1.1" 200 -
+2026-04-22 20:12:55,716 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:55] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-04-22 20:12:55,740 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:55] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-04-22 20:12:56,643 - INFO - 127.0.0.1 - - [22/Apr/2026 20:12:56] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-22 20:13:01,953 - INFO - 127.0.0.1 - - [22/Apr/2026 20:13:01] "GET / HTTP/1.1" 200 -
+2026-04-22 20:13:01,988 - INFO - 127.0.0.1 - - [22/Apr/2026 20:13:01] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-22 20:13:02,018 - INFO - 127.0.0.1 - - [22/Apr/2026 20:13:02] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-22 20:13:02,096 - INFO - 127.0.0.1 - - [22/Apr/2026 20:13:02] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-22 21:05:04,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-22 21:05:04,402 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-22 21:05:41,170 - INFO - 127.0.0.1 - - [22/Apr/2026 21:05:41] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2026-04-22 21:06:21,403 - INFO - 127.0.0.1 - - [22/Apr/2026 21:06:21] "[33mPOST /login/rdsonmuriel1 HTTP/1.1[0m" 404 -
+2026-04-22 21:08:18,539 - INFO - 127.0.0.1 - - [22/Apr/2026 21:08:18] "[33mPOST /login/ HTTP/1.1[0m" 404 -
+2026-04-22 21:09:11,245 - INFO - 127.0.0.1 - - [22/Apr/2026 21:09:11] "POST /login HTTP/1.1" 200 -
+2026-04-23 12:25:53,629 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-23 12:25:53,631 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-23 12:25:55,455 - INFO - 127.0.0.1 - - [23/Apr/2026 12:25:55] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-04-23 12:28:46,522 - INFO - 127.0.0.1 - - [23/Apr/2026 12:28:46] "GET / HTTP/1.1" 200 -
+2026-04-23 12:28:46,737 - INFO - 127.0.0.1 - - [23/Apr/2026 12:28:46] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-04-23 12:28:46,847 - INFO - 127.0.0.1 - - [23/Apr/2026 12:28:46] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-04-23 12:28:46,857 - INFO - 127.0.0.1 - - [23/Apr/2026 12:28:46] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-23 12:28:47,837 - INFO - 127.0.0.1 - - [23/Apr/2026 12:28:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-23 13:04:57,479 - INFO - 127.0.0.1 - - [23/Apr/2026 13:04:57] "GET / HTTP/1.1" 200 -
+2026-04-23 13:04:57,514 - INFO - 127.0.0.1 - - [23/Apr/2026 13:04:57] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-04-23 13:04:57,600 - INFO - 127.0.0.1 - - [23/Apr/2026 13:04:57] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-04-23 13:04:57,652 - INFO - 127.0.0.1 - - [23/Apr/2026 13:04:57] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-04-29 21:51:13,556 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-29 21:51:13,559 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 21:51:19,030 - INFO - 127.0.0.1 - - [29/Apr/2026 21:51:19] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-04-29 22:08:00,534 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-29 22:08:00,534 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 22:08:09,426 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: usuario.username
+2026-04-29 22:08:09,454 - INFO - 127.0.0.1 - - [29/Apr/2026 22:08:09] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:08:20,146 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-04-29 22:08:20,148 - INFO - 127.0.0.1 - - [29/Apr/2026 22:08:20] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:08:35,612 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-04-29 22:08:35,614 - INFO - 127.0.0.1 - - [29/Apr/2026 22:08:35] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:09:53,135 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-04-29 22:09:53,139 - INFO - 127.0.0.1 - - [29/Apr/2026 22:09:53] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:10:07,659 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.176:5000
+2026-04-29 22:10:07,659 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-29 22:10:25,097 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: usuario.username
+2026-04-29 22:10:25,099 - INFO - 127.0.0.1 - - [29/Apr/2026 22:10:25] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:10:45,716 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 19, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+2026-04-29 22:10:45,717 - INFO - 127.0.0.1 - - [29/Apr/2026 22:10:45] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-04-29 22:10:56,300 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 56, in login
+    session["usuario"] = username
+    ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2026-04-29 22:10:56,314 - INFO - 127.0.0.1 - - [29/Apr/2026 22:10:56] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-04-29 22:11:00,380 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 56, in login
+    session["usuario"] = username
+    ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2026-04-29 22:11:00,382 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-04-29 22:11:06,446 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:06] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-04-29 22:11:14,171 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 56, in login
+    session["usuario"] = username
+    ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2026-04-29 22:11:14,172 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:14] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-04-29 22:11:19,529 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:19] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-04-29 22:11:43,894 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:43] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-04-29 22:11:48,526 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 56, in login
+    session["usuario"] = username
+    ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2026-04-29 22:11:48,528 - INFO - 127.0.0.1 - - [29/Apr/2026 22:11:48] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-04-29 22:13:21,321 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\reids\OneDrive\Desktop\agenda pessoa\sistema\routes\usuarios_routes.py", line 56, in login
+    session["usuario"] = username
+    ~~~~~~~^^^^^^^^^^^
+  File "C:\Users\reids\AppData\Local\Programs\Python\Python314\Lib\site-packages\flask\sessions.py", line 104, in _fail
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2026-04-29 22:13:21,326 - INFO - 127.0.0.1 - - [29/Apr/2026 22:13:21] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-05-10 15:51:16,668 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 15:51:16,691 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 15:51:29,618 - INFO - 127.0.0.1 - - [10/May/2026 15:51:29] "GET /login HTTP/1.1" 200 -
+2026-05-10 15:51:30,667 - INFO - 127.0.0.1 - - [10/May/2026 15:51:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:26:40,615 - INFO - 127.0.0.1 - - [10/May/2026 17:26:40] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:07,534 - INFO - 127.0.0.1 - - [10/May/2026 17:27:07] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:09,431 - INFO - 127.0.0.1 - - [10/May/2026 17:27:09] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:10,100 - INFO - 127.0.0.1 - - [10/May/2026 17:27:10] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:10,468 - INFO - 127.0.0.1 - - [10/May/2026 17:27:10] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:22,593 - INFO - 127.0.0.1 - - [10/May/2026 17:27:22] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:22,874 - INFO - 127.0.0.1 - - [10/May/2026 17:27:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:27:36,387 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 17:27:36,388 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 17:27:38,390 - INFO - 127.0.0.1 - - [10/May/2026 17:27:38] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:27:38,526 - INFO - 127.0.0.1 - - [10/May/2026 17:27:38] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:28:43,521 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 17:28:43,522 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 17:28:49,605 - INFO - 127.0.0.1 - - [10/May/2026 17:28:49] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:28:54,838 - INFO - 127.0.0.1 - - [10/May/2026 17:28:54] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:29:21,447 - INFO - 127.0.0.1 - - [10/May/2026 17:29:21] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:29:21,918 - INFO - 127.0.0.1 - - [10/May/2026 17:29:21] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:29:22,135 - INFO - 127.0.0.1 - - [10/May/2026 17:29:22] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:29:22,350 - INFO - 127.0.0.1 - - [10/May/2026 17:29:22] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:29:22,503 - INFO - 127.0.0.1 - - [10/May/2026 17:29:22] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:03,460 - INFO - 127.0.0.1 - - [10/May/2026 17:31:03] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:31:03,603 - INFO - 127.0.0.1 - - [10/May/2026 17:31:03] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:31:03,832 - INFO - 127.0.0.1 - - [10/May/2026 17:31:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:31:06,006 - INFO - 127.0.0.1 - - [10/May/2026 17:31:06] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:31:06,040 - INFO - 127.0.0.1 - - [10/May/2026 17:31:06] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:31:06,228 - INFO - 127.0.0.1 - - [10/May/2026 17:31:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:31:18,459 - INFO - 127.0.0.1 - - [10/May/2026 17:31:18] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:22,522 - INFO - 127.0.0.1 - - [10/May/2026 17:31:22] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:22,913 - INFO - 127.0.0.1 - - [10/May/2026 17:31:22] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:23,138 - INFO - 127.0.0.1 - - [10/May/2026 17:31:23] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:23,290 - INFO - 127.0.0.1 - - [10/May/2026 17:31:23] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:31:30,217 - INFO - 127.0.0.1 - - [10/May/2026 17:31:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:32:43,612 - INFO - 127.0.0.1 - - [10/May/2026 17:32:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:36:35,095 - INFO - 127.0.0.1 - - [10/May/2026 17:36:35] "GET /login HTTP/1.1" 200 -
+2026-05-10 17:36:35,212 - INFO - 127.0.0.1 - - [10/May/2026 17:36:35] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:36:35,317 - INFO - 127.0.0.1 - - [10/May/2026 17:36:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:36:36,244 - INFO - 127.0.0.1 - - [10/May/2026 17:36:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:36:51,600 - INFO - 127.0.0.1 - - [10/May/2026 17:36:51] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2026-05-10 17:37:13,159 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 17:37:13,160 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 17:37:14,719 - INFO - 127.0.0.1 - - [10/May/2026 17:37:14] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2026-05-10 17:37:14,778 - INFO - 127.0.0.1 - - [10/May/2026 17:37:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:37:21,261 - INFO - 127.0.0.1 - - [10/May/2026 17:37:21] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:37:21,343 - INFO - 127.0.0.1 - - [10/May/2026 17:37:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:37:21,468 - INFO - 127.0.0.1 - - [10/May/2026 17:37:21] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:37:33,596 - INFO - 127.0.0.1 - - [10/May/2026 17:37:33] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 17:43:10,427 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 17:43:10,428 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 17:43:14,921 - INFO - 127.0.0.1 - - [10/May/2026 17:43:14] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:43:15,085 - INFO - 127.0.0.1 - - [10/May/2026 17:43:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:43:15,170 - INFO - 127.0.0.1 - - [10/May/2026 17:43:15] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:43:22,558 - INFO - 127.0.0.1 - - [10/May/2026 17:43:22] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 17:50:04,157 - INFO - 127.0.0.1 - - [10/May/2026 17:50:04] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:50:04,284 - INFO - 127.0.0.1 - - [10/May/2026 17:50:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:50:04,320 - INFO - 127.0.0.1 - - [10/May/2026 17:50:04] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:50:05,328 - INFO - 127.0.0.1 - - [10/May/2026 17:50:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:50:12,706 - INFO - 127.0.0.1 - - [10/May/2026 17:50:12] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:50:12,806 - INFO - 127.0.0.1 - - [10/May/2026 17:50:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:50:12,852 - INFO - 127.0.0.1 - - [10/May/2026 17:50:12] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:50:56,450 - INFO - 127.0.0.1 - - [10/May/2026 17:50:56] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:50:56,547 - INFO - 127.0.0.1 - - [10/May/2026 17:50:56] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:50:56,744 - INFO - 127.0.0.1 - - [10/May/2026 17:50:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:50:57,690 - INFO - 127.0.0.1 - - [10/May/2026 17:50:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:51:07,419 - INFO - 127.0.0.1 - - [10/May/2026 17:51:07] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 17:51:27,232 - INFO - 127.0.0.1 - - [10/May/2026 17:51:27] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:51:27,328 - INFO - 127.0.0.1 - - [10/May/2026 17:51:27] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:51:27,368 - INFO - 127.0.0.1 - - [10/May/2026 17:51:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:51:28,422 - INFO - 127.0.0.1 - - [10/May/2026 17:51:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:51:34,715 - INFO - 127.0.0.1 - - [10/May/2026 17:51:34] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 17:53:29,490 - INFO - 127.0.0.1 - - [10/May/2026 17:53:29] "POST /login HTTP/1.1" 200 -
+2026-05-10 17:53:46,033 - INFO - 127.0.0.1 - - [10/May/2026 17:53:46] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:53:46,112 - INFO - 127.0.0.1 - - [10/May/2026 17:53:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:53:46,148 - INFO - 127.0.0.1 - - [10/May/2026 17:53:46] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:53:57,164 - INFO - 127.0.0.1 - - [10/May/2026 17:53:57] "POST /login HTTP/1.1" 200 -
+2026-05-10 17:55:58,932 - INFO - 127.0.0.1 - - [10/May/2026 17:55:58] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 17:55:58,996 - INFO - 127.0.0.1 - - [10/May/2026 17:55:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 17:55:59,040 - INFO - 127.0.0.1 - - [10/May/2026 17:55:59] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 17:56:00,089 - INFO - 127.0.0.1 - - [10/May/2026 17:56:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 17:56:19,471 - INFO - 127.0.0.1 - - [10/May/2026 17:56:19] "POST /login HTTP/1.1" 200 -
+2026-05-10 18:00:17,769 - INFO - 127.0.0.1 - - [10/May/2026 18:00:17] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 18:06:01,000 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:06:01,001 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:06:06,113 - INFO - 127.0.0.1 - - [10/May/2026 18:06:06] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 18:06:06,251 - INFO - 127.0.0.1 - - [10/May/2026 18:06:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:06:06,354 - INFO - 127.0.0.1 - - [10/May/2026 18:06:06] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 18:06:07,346 - INFO - 127.0.0.1 - - [10/May/2026 18:06:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:06:14,828 - INFO - 127.0.0.1 - - [10/May/2026 18:06:14] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 18:06:57,530 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:06:57,531 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:07:02,706 - INFO - 127.0.0.1 - - [10/May/2026 18:07:02] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 18:07:02,821 - INFO - 127.0.0.1 - - [10/May/2026 18:07:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:07:02,913 - INFO - 127.0.0.1 - - [10/May/2026 18:07:02] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 18:07:04,026 - INFO - 127.0.0.1 - - [10/May/2026 18:07:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:07:11,159 - INFO - 127.0.0.1 - - [10/May/2026 18:07:11] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 18:07:28,941 - INFO - 127.0.0.1 - - [10/May/2026 18:07:28] "POST /login HTTP/1.1" 200 -
+2026-05-10 18:08:59,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:08:59,342 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:09:03,725 - INFO - 127.0.0.1 - - [10/May/2026 18:09:03] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 18:09:03,810 - INFO - 127.0.0.1 - - [10/May/2026 18:09:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:09:03,958 - INFO - 127.0.0.1 - - [10/May/2026 18:09:03] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 18:09:04,942 - INFO - 127.0.0.1 - - [10/May/2026 18:09:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:09:13,678 - INFO - 127.0.0.1 - - [10/May/2026 18:09:13] "POST /login HTTP/1.1" 200 -
+2026-05-10 18:09:42,416 - INFO - 127.0.0.1 - - [10/May/2026 18:09:42] "GET / HTTP/1.1" 200 -
+2026-05-10 18:09:42,503 - INFO - 127.0.0.1 - - [10/May/2026 18:09:42] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:09:42,506 - INFO - 127.0.0.1 - - [10/May/2026 18:09:42] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:09:43,261 - INFO - 127.0.0.1 - - [10/May/2026 18:09:43] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-10 18:09:44,809 - INFO - 127.0.0.1 - - [10/May/2026 18:09:44] "GET /cadastro HTTP/1.1" 200 -
+2026-05-10 18:09:44,865 - INFO - 127.0.0.1 - - [10/May/2026 18:09:44] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:09:44,896 - INFO - 127.0.0.1 - - [10/May/2026 18:09:44] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-05-10 18:10:25,169 - INFO - 127.0.0.1 - - [10/May/2026 18:10:25] "[31m[1mPOST /contatos HTTP/1.1[0m" 400 -
+2026-05-10 18:11:04,770 - INFO - 127.0.0.1 - - [10/May/2026 18:11:04] "[31m[1mPOST /contatos HTTP/1.1[0m" 400 -
+2026-05-10 18:11:10,705 - INFO - 127.0.0.1 - - [10/May/2026 18:11:10] "GET /cadastro HTTP/1.1" 200 -
+2026-05-10 18:11:10,764 - INFO - 127.0.0.1 - - [10/May/2026 18:11:10] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:11:10,805 - INFO - 127.0.0.1 - - [10/May/2026 18:11:10] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-05-10 18:11:11,426 - INFO - 127.0.0.1 - - [10/May/2026 18:11:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:11:22,336 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:11:22,337 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:11:24,893 - INFO - 127.0.0.1 - - [10/May/2026 18:11:24] "GET /cadastro HTTP/1.1" 200 -
+2026-05-10 18:11:25,074 - INFO - 127.0.0.1 - - [10/May/2026 18:11:25] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:11:25,088 - INFO - 127.0.0.1 - - [10/May/2026 18:11:25] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-05-10 18:11:25,601 - INFO - 127.0.0.1 - - [10/May/2026 18:11:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:11:54,364 - INFO - 127.0.0.1 - - [10/May/2026 18:11:54] "[31m[1mPOST /contatos HTTP/1.1[0m" 400 -
+2026-05-10 18:12:09,381 - INFO - 127.0.0.1 - - [10/May/2026 18:12:09] "[35m[1mPOST /contatos HTTP/1.1[0m" 201 -
+2026-05-10 18:12:12,969 - INFO - 127.0.0.1 - - [10/May/2026 18:12:12] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:16,103 - INFO - 127.0.0.1 - - [10/May/2026 18:12:16] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:16,145 - INFO - 127.0.0.1 - - [10/May/2026 18:12:16] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:16,189 - INFO - 127.0.0.1 - - [10/May/2026 18:12:16] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:16,380 - INFO - 127.0.0.1 - - [10/May/2026 18:12:16] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:19,210 - INFO - 127.0.0.1 - - [10/May/2026 18:12:19] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:19,249 - INFO - 127.0.0.1 - - [10/May/2026 18:12:19] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:19,288 - INFO - 127.0.0.1 - - [10/May/2026 18:12:19] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:19,398 - INFO - 127.0.0.1 - - [10/May/2026 18:12:19] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:20,176 - INFO - 127.0.0.1 - - [10/May/2026 18:12:20] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:20,212 - INFO - 127.0.0.1 - - [10/May/2026 18:12:20] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:20,216 - INFO - 127.0.0.1 - - [10/May/2026 18:12:20] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:20,365 - INFO - 127.0.0.1 - - [10/May/2026 18:12:20] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:20,949 - INFO - 127.0.0.1 - - [10/May/2026 18:12:20] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:21,005 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:21,030 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:21,113 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:21,590 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:21,680 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:21,683 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:21,782 - INFO - 127.0.0.1 - - [10/May/2026 18:12:21] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:22,344 - INFO - 127.0.0.1 - - [10/May/2026 18:12:22] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:22,487 - INFO - 127.0.0.1 - - [10/May/2026 18:12:22] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:22,517 - INFO - 127.0.0.1 - - [10/May/2026 18:12:22] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:22,631 - INFO - 127.0.0.1 - - [10/May/2026 18:12:22] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:22,922 - INFO - 127.0.0.1 - - [10/May/2026 18:12:22] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:23,172 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:23,207 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:23,297 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:23,764 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:23,817 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:23,829 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:23,876 - INFO - 127.0.0.1 - - [10/May/2026 18:12:23] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:24,864 - INFO - 127.0.0.1 - - [10/May/2026 18:12:24] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:24,898 - INFO - 127.0.0.1 - - [10/May/2026 18:12:24] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:24,914 - INFO - 127.0.0.1 - - [10/May/2026 18:12:24] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:24,979 - INFO - 127.0.0.1 - - [10/May/2026 18:12:24] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:28,269 - INFO - 127.0.0.1 - - [10/May/2026 18:12:28] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:28,311 - INFO - 127.0.0.1 - - [10/May/2026 18:12:28] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:28,354 - INFO - 127.0.0.1 - - [10/May/2026 18:12:28] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:28,436 - INFO - 127.0.0.1 - - [10/May/2026 18:12:28] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:29,162 - INFO - 127.0.0.1 - - [10/May/2026 18:12:29] "GET / HTTP/1.1" 200 -
+2026-05-10 18:12:29,294 - INFO - 127.0.0.1 - - [10/May/2026 18:12:29] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:29,322 - INFO - 127.0.0.1 - - [10/May/2026 18:12:29] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:12:29,426 - INFO - 127.0.0.1 - - [10/May/2026 18:12:29] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:12:30,875 - INFO - 127.0.0.1 - - [10/May/2026 18:12:30] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:12:30,914 - INFO - 127.0.0.1 - - [10/May/2026 18:12:30] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:12:30,941 - INFO - 127.0.0.1 - - [10/May/2026 18:12:30] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:12:34,373 - INFO - 127.0.0.1 - - [10/May/2026 18:12:34] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:12:35,114 - INFO - 127.0.0.1 - - [10/May/2026 18:12:35] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:12:35,315 - INFO - 127.0.0.1 - - [10/May/2026 18:12:35] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:14,821 - INFO - 127.0.0.1 - - [10/May/2026 18:15:14] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:14,887 - INFO - 127.0.0.1 - - [10/May/2026 18:15:14] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:14,963 - INFO - 127.0.0.1 - - [10/May/2026 18:15:14] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:15:15,098 - INFO - 127.0.0.1 - - [10/May/2026 18:15:15] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:16,818 - INFO - 127.0.0.1 - - [10/May/2026 18:15:16] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:16,856 - INFO - 127.0.0.1 - - [10/May/2026 18:15:16] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:16,862 - INFO - 127.0.0.1 - - [10/May/2026 18:15:16] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:16,955 - INFO - 127.0.0.1 - - [10/May/2026 18:15:16] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:17,538 - INFO - 127.0.0.1 - - [10/May/2026 18:15:17] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:17,589 - INFO - 127.0.0.1 - - [10/May/2026 18:15:17] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:17,598 - INFO - 127.0.0.1 - - [10/May/2026 18:15:17] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:17,610 - INFO - 127.0.0.1 - - [10/May/2026 18:15:17] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:18,106 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:18,179 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:18,186 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:18,227 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:18,492 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:18,615 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:18,667 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:18,701 - INFO - 127.0.0.1 - - [10/May/2026 18:15:18] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:19,169 - INFO - 127.0.0.1 - - [10/May/2026 18:15:19] "GET / HTTP/1.1" 200 -
+2026-05-10 18:15:19,553 - INFO - 127.0.0.1 - - [10/May/2026 18:15:19] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:19,554 - INFO - 127.0.0.1 - - [10/May/2026 18:15:19] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:19,624 - INFO - 127.0.0.1 - - [10/May/2026 18:15:19] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:15:20,461 - INFO - 127.0.0.1 - - [10/May/2026 18:15:20] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:15:20,516 - INFO - 127.0.0.1 - - [10/May/2026 18:15:20] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:15:20,520 - INFO - 127.0.0.1 - - [10/May/2026 18:15:20] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-05-10 18:15:23,039 - INFO - 127.0.0.1 - - [10/May/2026 18:15:23] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-10 18:15:26,590 - INFO - 127.0.0.1 - - [10/May/2026 18:15:26] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:27,382 - INFO - 127.0.0.1 - - [10/May/2026 18:15:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:27,742 - INFO - 127.0.0.1 - - [10/May/2026 18:15:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:27,950 - INFO - 127.0.0.1 - - [10/May/2026 18:15:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:28,504 - INFO - 127.0.0.1 - - [10/May/2026 18:15:28] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:28,718 - INFO - 127.0.0.1 - - [10/May/2026 18:15:28] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:28,919 - INFO - 127.0.0.1 - - [10/May/2026 18:15:28] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:15:29,102 - INFO - 127.0.0.1 - - [10/May/2026 18:15:29] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:17,883 - INFO - 127.0.0.1 - - [10/May/2026 18:16:17] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:18,385 - INFO - 127.0.0.1 - - [10/May/2026 18:16:18] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:18,671 - INFO - 127.0.0.1 - - [10/May/2026 18:16:18] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:20,986 - INFO - 127.0.0.1 - - [10/May/2026 18:16:20] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:16:21,025 - INFO - 127.0.0.1 - - [10/May/2026 18:16:21] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:16:21,055 - INFO - 127.0.0.1 - - [10/May/2026 18:16:21] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-05-10 18:16:23,202 - INFO - 127.0.0.1 - - [10/May/2026 18:16:23] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:24,688 - INFO - 127.0.0.1 - - [10/May/2026 18:16:24] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:16:24,724 - INFO - 127.0.0.1 - - [10/May/2026 18:16:24] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:16:24,751 - INFO - 127.0.0.1 - - [10/May/2026 18:16:24] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-05-10 18:16:26,656 - INFO - 127.0.0.1 - - [10/May/2026 18:16:26] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:27,119 - INFO - 127.0.0.1 - - [10/May/2026 18:16:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:27,320 - INFO - 127.0.0.1 - - [10/May/2026 18:16:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:27,526 - INFO - 127.0.0.1 - - [10/May/2026 18:16:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:27,737 - INFO - 127.0.0.1 - - [10/May/2026 18:16:27] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:16:32,038 - INFO - 127.0.0.1 - - [10/May/2026 18:16:32] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:16:32,075 - INFO - 127.0.0.1 - - [10/May/2026 18:16:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:17:32,447 - INFO - 127.0.0.1 - - [10/May/2026 18:17:32] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:17:32,599 - INFO - 127.0.0.1 - - [10/May/2026 18:17:32] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:17:32,603 - INFO - 127.0.0.1 - - [10/May/2026 18:17:32] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:17:32,872 - INFO - 127.0.0.1 - - [10/May/2026 18:17:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:17:33,785 - INFO - 127.0.0.1 - - [10/May/2026 18:17:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:17:42,086 - INFO - 127.0.0.1 - - [10/May/2026 18:17:42] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:21:57,437 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:21:57,437 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:22:00,349 - INFO - 127.0.0.1 - - [10/May/2026 18:22:00] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:22:00,546 - INFO - 127.0.0.1 - - [10/May/2026 18:22:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:22:00,619 - INFO - 127.0.0.1 - - [10/May/2026 18:22:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:22:00,621 - INFO - 127.0.0.1 - - [10/May/2026 18:22:00] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:22:01,809 - INFO - 127.0.0.1 - - [10/May/2026 18:22:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:22:03,666 - INFO - 127.0.0.1 - - [10/May/2026 18:22:03] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:22:54,465 - INFO - 127.0.0.1 - - [10/May/2026 18:22:54] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:22:54,604 - INFO - 127.0.0.1 - - [10/May/2026 18:22:54] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:22:54,609 - INFO - 127.0.0.1 - - [10/May/2026 18:22:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:22:54,609 - INFO - 127.0.0.1 - - [10/May/2026 18:22:54] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:22:56,169 - INFO - 127.0.0.1 - - [10/May/2026 18:22:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:22:58,219 - INFO - 127.0.0.1 - - [10/May/2026 18:22:58] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:24:09,421 - INFO - 127.0.0.1 - - [10/May/2026 18:24:09] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:24:09,548 - INFO - 127.0.0.1 - - [10/May/2026 18:24:09] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:24:09,554 - INFO - 127.0.0.1 - - [10/May/2026 18:24:09] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:24:09,557 - INFO - 127.0.0.1 - - [10/May/2026 18:24:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:24:10,594 - INFO - 127.0.0.1 - - [10/May/2026 18:24:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:24:10,842 - INFO - 127.0.0.1 - - [10/May/2026 18:24:10] "GET / HTTP/1.1" 200 -
+2026-05-10 18:24:10,982 - INFO - 127.0.0.1 - - [10/May/2026 18:24:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:24:10,994 - INFO - 127.0.0.1 - - [10/May/2026 18:24:10] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:24:10,995 - INFO - 127.0.0.1 - - [10/May/2026 18:24:10] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:24:11,365 - INFO - 127.0.0.1 - - [10/May/2026 18:24:11] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:24:13,106 - INFO - 127.0.0.1 - - [10/May/2026 18:24:13] "GET / HTTP/1.1" 200 -
+2026-05-10 18:24:13,166 - INFO - 127.0.0.1 - - [10/May/2026 18:24:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:24:13,207 - INFO - 127.0.0.1 - - [10/May/2026 18:24:13] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:24:13,207 - INFO - 127.0.0.1 - - [10/May/2026 18:24:13] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:24:13,522 - INFO - 127.0.0.1 - - [10/May/2026 18:24:13] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:24:15,379 - INFO - 127.0.0.1 - - [10/May/2026 18:24:15] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:24:15,466 - INFO - 127.0.0.1 - - [10/May/2026 18:24:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:24:15,497 - INFO - 127.0.0.1 - - [10/May/2026 18:24:15] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:24:15,497 - INFO - 127.0.0.1 - - [10/May/2026 18:24:15] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:24:17,582 - INFO - 127.0.0.1 - - [10/May/2026 18:24:17] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:25:37,328 - INFO - 127.0.0.1 - - [10/May/2026 18:25:37] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:25:37,423 - INFO - 127.0.0.1 - - [10/May/2026 18:25:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:25:37,473 - INFO - 127.0.0.1 - - [10/May/2026 18:25:37] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:25:37,474 - INFO - 127.0.0.1 - - [10/May/2026 18:25:37] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:25:38,772 - INFO - 127.0.0.1 - - [10/May/2026 18:25:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:25:40,473 - INFO - 127.0.0.1 - - [10/May/2026 18:25:40] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:25:59,756 - INFO - 127.0.0.1 - - [10/May/2026 18:25:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:25:59,757 - INFO - 127.0.0.1 - - [10/May/2026 18:25:59] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:25:59,887 - INFO - 127.0.0.1 - - [10/May/2026 18:25:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:26:01,790 - INFO - 127.0.0.1 - - [10/May/2026 18:26:01] "GET / HTTP/1.1" 200 -
+2026-05-10 18:26:01,905 - INFO - 127.0.0.1 - - [10/May/2026 18:26:01] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:26:01,909 - INFO - 127.0.0.1 - - [10/May/2026 18:26:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:26:01,912 - INFO - 127.0.0.1 - - [10/May/2026 18:26:01] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:26:02,226 - INFO - 127.0.0.1 - - [10/May/2026 18:26:02] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:26:03,738 - INFO - 127.0.0.1 - - [10/May/2026 18:26:03] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:26:03,902 - INFO - 127.0.0.1 - - [10/May/2026 18:26:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:26:03,950 - INFO - 127.0.0.1 - - [10/May/2026 18:26:03] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:26:03,951 - INFO - 127.0.0.1 - - [10/May/2026 18:26:03] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:26:06,608 - INFO - 127.0.0.1 - - [10/May/2026 18:26:06] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:26:10,643 - INFO - 127.0.0.1 - - [10/May/2026 18:26:10] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-10 18:26:14,290 - INFO - 127.0.0.1 - - [10/May/2026 18:26:14] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:28:11,415 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:28:11,416 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:28:14,319 - INFO - 127.0.0.1 - - [10/May/2026 18:28:14] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:28:14,489 - INFO - 127.0.0.1 - - [10/May/2026 18:28:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:28:14,695 - INFO - 127.0.0.1 - - [10/May/2026 18:28:14] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:28:14,703 - INFO - 127.0.0.1 - - [10/May/2026 18:28:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:28:15,841 - INFO - 127.0.0.1 - - [10/May/2026 18:28:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:28:17,881 - INFO - 127.0.0.1 - - [10/May/2026 18:28:17] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:28:24,960 - INFO - 127.0.0.1 - - [10/May/2026 18:28:24] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:30:41,301 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:30:41,302 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:30:44,252 - INFO - 127.0.0.1 - - [10/May/2026 18:30:44] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:30:44,405 - INFO - 127.0.0.1 - - [10/May/2026 18:30:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:30:44,562 - INFO - 127.0.0.1 - - [10/May/2026 18:30:44] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:30:44,564 - INFO - 127.0.0.1 - - [10/May/2026 18:30:44] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:30:46,069 - INFO - 127.0.0.1 - - [10/May/2026 18:30:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:30:47,531 - INFO - 127.0.0.1 - - [10/May/2026 18:30:47] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:31:31,510 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:31:31,511 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:31:35,532 - INFO - 127.0.0.1 - - [10/May/2026 18:31:35] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:31:35,664 - INFO - 127.0.0.1 - - [10/May/2026 18:31:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:31:35,802 - INFO - 127.0.0.1 - - [10/May/2026 18:31:35] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:31:35,808 - INFO - 127.0.0.1 - - [10/May/2026 18:31:35] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:31:36,752 - INFO - 127.0.0.1 - - [10/May/2026 18:31:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:31:38,657 - INFO - 127.0.0.1 - - [10/May/2026 18:31:38] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:37:39,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:37:39,136 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:37:41,960 - INFO - 127.0.0.1 - - [10/May/2026 18:37:41] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:37:42,077 - INFO - 127.0.0.1 - - [10/May/2026 18:37:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:37:42,266 - INFO - 127.0.0.1 - - [10/May/2026 18:37:42] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:37:42,305 - INFO - 127.0.0.1 - - [10/May/2026 18:37:42] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:37:43,289 - INFO - 127.0.0.1 - - [10/May/2026 18:37:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:37:44,666 - INFO - 127.0.0.1 - - [10/May/2026 18:37:44] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:37:47,371 - INFO - 127.0.0.1 - - [10/May/2026 18:37:47] "GET / HTTP/1.1" 200 -
+2026-05-10 18:37:47,484 - INFO - 127.0.0.1 - - [10/May/2026 18:37:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-10 18:37:47,511 - INFO - 127.0.0.1 - - [10/May/2026 18:37:47] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:37:47,513 - INFO - 127.0.0.1 - - [10/May/2026 18:37:47] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:37:47,821 - INFO - 127.0.0.1 - - [10/May/2026 18:37:47] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:42:02,738 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-10 18:42:02,740 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-10 18:42:09,012 - INFO - 127.0.0.1 - - [10/May/2026 18:42:09] "GET / HTTP/1.1" 200 -
+2026-05-10 18:42:09,222 - INFO - 127.0.0.1 - - [10/May/2026 18:42:09] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-10 18:42:09,224 - INFO - 127.0.0.1 - - [10/May/2026 18:42:09] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-10 18:42:10,215 - INFO - 127.0.0.1 - - [10/May/2026 18:42:10] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 18:42:10,922 - INFO - 127.0.0.1 - - [10/May/2026 18:42:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-10 18:42:11,886 - INFO - 127.0.0.1 - - [10/May/2026 18:42:11] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 18:42:11,955 - INFO - 127.0.0.1 - - [10/May/2026 18:42:11] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 18:42:11,956 - INFO - 127.0.0.1 - - [10/May/2026 18:42:11] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-10 18:42:14,050 - INFO - 127.0.0.1 - - [10/May/2026 18:42:14] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 18:42:16,308 - INFO - 127.0.0.1 - - [10/May/2026 18:42:16] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-10 19:59:13,203 - INFO - 127.0.0.1 - - [10/May/2026 19:59:13] "GET /buscar HTTP/1.1" 200 -
+2026-05-10 19:59:13,298 - INFO - 127.0.0.1 - - [10/May/2026 19:59:13] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-05-10 19:59:13,302 - INFO - 127.0.0.1 - - [10/May/2026 19:59:13] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 19:59:15,426 - INFO - 127.0.0.1 - - [10/May/2026 19:59:15] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-10 19:59:18,453 - INFO - 127.0.0.1 - - [10/May/2026 19:59:18] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 19:59:36,762 - INFO - 127.0.0.1 - - [10/May/2026 19:59:36] "PUT /contatos/1 HTTP/1.1" 200 -
+2026-05-10 19:59:38,498 - INFO - 127.0.0.1 - - [10/May/2026 19:59:38] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-10 19:59:42,841 - INFO - 127.0.0.1 - - [10/May/2026 19:59:42] "GET / HTTP/1.1" 200 -
+2026-05-10 19:59:42,925 - INFO - 127.0.0.1 - - [10/May/2026 19:59:42] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-10 19:59:42,929 - INFO - 127.0.0.1 - - [10/May/2026 19:59:42] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-10 19:59:43,029 - INFO - 127.0.0.1 - - [10/May/2026 19:59:43] "GET /contatos HTTP/1.1" 200 -
+2026-05-10 19:59:51,274 - INFO - 127.0.0.1 - - [10/May/2026 19:59:51] "GET /login-page HTTP/1.1" 200 -
+2026-05-10 19:59:51,357 - INFO - 127.0.0.1 - - [10/May/2026 19:59:51] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-10 20:00:00,377 - INFO - 127.0.0.1 - - [10/May/2026 20:00:00] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-10 20:00:15,378 - INFO - 127.0.0.1 - - [10/May/2026 20:00:15] "POST /login HTTP/1.1" 200 -
+2026-05-11 15:22:06,938 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 15:22:06,939 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 15:22:18,051 - INFO - 127.0.0.1 - - [11/May/2026 15:22:18] "[33mGET /home HTTP/1.1[0m" 404 -
+2026-05-11 15:22:18,972 - INFO - 127.0.0.1 - - [11/May/2026 15:22:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:22:29,846 - INFO - 127.0.0.1 - - [11/May/2026 15:22:29] "GET /index HTTP/1.1" 200 -
+2026-05-11 15:22:30,119 - INFO - 127.0.0.1 - - [11/May/2026 15:22:30] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-11 15:22:30,119 - INFO - 127.0.0.1 - - [11/May/2026 15:22:30] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-11 15:22:30,814 - INFO - 127.0.0.1 - - [11/May/2026 15:22:30] "GET /contatos HTTP/1.1" 200 -
+2026-05-11 15:22:35,554 - INFO - 127.0.0.1 - - [11/May/2026 15:22:35] "GET / HTTP/1.1" 200 -
+2026-05-11 15:22:45,807 - INFO - 127.0.0.1 - - [11/May/2026 15:22:45] "GET / HTTP/1.1" 200 -
+2026-05-11 15:22:46,039 - INFO - 127.0.0.1 - - [11/May/2026 15:22:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:22:47,541 - INFO - 127.0.0.1 - - [11/May/2026 15:22:47] "GET / HTTP/1.1" 200 -
+2026-05-11 15:22:47,756 - INFO - 127.0.0.1 - - [11/May/2026 15:22:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:22:48,592 - INFO - 127.0.0.1 - - [11/May/2026 15:22:48] "GET / HTTP/1.1" 200 -
+2026-05-11 15:22:55,039 - INFO - 127.0.0.1 - - [11/May/2026 15:22:55] "GET / HTTP/1.1" 200 -
+2026-05-11 15:22:55,274 - INFO - 127.0.0.1 - - [11/May/2026 15:22:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:23:02,385 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 15:23:02,385 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 15:23:06,426 - INFO - 127.0.0.1 - - [11/May/2026 15:23:06] "GET / HTTP/1.1" 200 -
+2026-05-11 15:23:06,653 - INFO - 127.0.0.1 - - [11/May/2026 15:23:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:23:55,356 - INFO - 127.0.0.1 - - [11/May/2026 15:23:55] "GET / HTTP/1.1" 200 -
+2026-05-11 15:23:55,631 - INFO - 127.0.0.1 - - [11/May/2026 15:23:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:24:04,968 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 15:24:04,969 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 15:24:06,983 - INFO - 127.0.0.1 - - [11/May/2026 15:24:06] "GET / HTTP/1.1" 200 -
+2026-05-11 15:24:07,201 - INFO - 127.0.0.1 - - [11/May/2026 15:24:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 15:24:09,045 - INFO - 127.0.0.1 - - [11/May/2026 15:24:09] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:28:30,523 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:28:30,525 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:28:33,536 - INFO - 127.0.0.1 - - [11/May/2026 19:28:33] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:28:33,787 - INFO - 127.0.0.1 - - [11/May/2026 19:28:33] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:28:34,617 - INFO - 127.0.0.1 - - [11/May/2026 19:28:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:28:41,967 - INFO - 127.0.0.1 - - [11/May/2026 19:28:41] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:28:42,199 - INFO - 127.0.0.1 - - [11/May/2026 19:28:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:28:47,395 - INFO - 127.0.0.1 - - [11/May/2026 19:28:47] "GET / HTTP/1.1" 200 -
+2026-05-11 19:28:49,243 - INFO - 127.0.0.1 - - [11/May/2026 19:28:49] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:28:51,481 - INFO - 127.0.0.1 - - [11/May/2026 19:28:51] "[33mGET /cadastro_login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:31:39,110 - INFO - 127.0.0.1 - - [11/May/2026 19:31:39] "[33mGET /cadastro_login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:31:41,237 - INFO - 127.0.0.1 - - [11/May/2026 19:31:41] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:33:13,833 - INFO - 127.0.0.1 - - [11/May/2026 19:33:13] "GET /index HTTP/1.1" 200 -
+2026-05-11 19:33:14,068 - INFO - 127.0.0.1 - - [11/May/2026 19:33:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-11 19:33:14,069 - INFO - 127.0.0.1 - - [11/May/2026 19:33:14] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-11 19:33:14,777 - INFO - 127.0.0.1 - - [11/May/2026 19:33:14] "GET /contatos HTTP/1.1" 200 -
+2026-05-11 19:33:23,473 - INFO - 127.0.0.1 - - [11/May/2026 19:33:23] "GET /cadastro HTTP/1.1" 200 -
+2026-05-11 19:33:23,540 - INFO - 127.0.0.1 - - [11/May/2026 19:33:23] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 19:33:23,567 - INFO - 127.0.0.1 - - [11/May/2026 19:33:23] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-05-11 19:34:06,044 - INFO - 127.0.0.1 - - [11/May/2026 19:34:06] "[35m[1mPOST /contatos HTTP/1.1[0m" 201 -
+2026-05-11 19:34:09,034 - INFO - 127.0.0.1 - - [11/May/2026 19:34:09] "GET /contatos HTTP/1.1" 200 -
+2026-05-11 19:34:10,848 - INFO - 127.0.0.1 - - [11/May/2026 19:34:10] "GET /buscar HTTP/1.1" 200 -
+2026-05-11 19:34:10,923 - INFO - 127.0.0.1 - - [11/May/2026 19:34:10] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 19:34:10,953 - INFO - 127.0.0.1 - - [11/May/2026 19:34:10] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-05-11 19:34:15,722 - INFO - 127.0.0.1 - - [11/May/2026 19:34:15] "[33mGET /contatos/3 HTTP/1.1[0m" 404 -
+2026-05-11 19:34:18,424 - INFO - 127.0.0.1 - - [11/May/2026 19:34:18] "GET /contatos/2 HTTP/1.1" 200 -
+2026-05-11 19:34:22,343 - INFO - 127.0.0.1 - - [11/May/2026 19:34:22] "[35m[1mDELETE /contatos/2 HTTP/1.1[0m" 500 -
+2026-05-11 19:34:28,739 - INFO - 127.0.0.1 - - [11/May/2026 19:34:28] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-11 19:34:31,627 - INFO - 127.0.0.1 - - [11/May/2026 19:34:31] "[33mGET /contatos/2 HTTP/1.1[0m" 404 -
+2026-05-11 19:34:36,245 - INFO - 127.0.0.1 - - [11/May/2026 19:34:36] "GET /index HTTP/1.1" 200 -
+2026-05-11 19:34:36,275 - INFO - 127.0.0.1 - - [11/May/2026 19:34:36] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 19:34:36,285 - INFO - 127.0.0.1 - - [11/May/2026 19:34:36] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 19:34:36,380 - INFO - 127.0.0.1 - - [11/May/2026 19:34:36] "GET /contatos HTTP/1.1" 200 -
+2026-05-11 19:34:37,829 - INFO - 127.0.0.1 - - [11/May/2026 19:34:37] "GET /buscar HTTP/1.1" 200 -
+2026-05-11 19:34:37,867 - INFO - 127.0.0.1 - - [11/May/2026 19:34:37] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 19:34:37,877 - INFO - 127.0.0.1 - - [11/May/2026 19:34:37] "[36mGET /static/js/busca_dado.js HTTP/1.1[0m" 304 -
+2026-05-11 19:34:40,899 - INFO - 127.0.0.1 - - [11/May/2026 19:34:40] "GET /contatos/1 HTTP/1.1" 200 -
+2026-05-11 19:34:42,299 - INFO - 127.0.0.1 - - [11/May/2026 19:34:42] "[35m[1mDELETE /contatos/1 HTTP/1.1[0m" 500 -
+2026-05-11 19:34:50,996 - INFO - 127.0.0.1 - - [11/May/2026 19:34:50] "GET /index HTTP/1.1" 200 -
+2026-05-11 19:34:51,049 - INFO - 127.0.0.1 - - [11/May/2026 19:34:51] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 19:34:51,076 - INFO - 127.0.0.1 - - [11/May/2026 19:34:51] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 19:34:51,141 - INFO - 127.0.0.1 - - [11/May/2026 19:34:51] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-11 19:37:19,905 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:37:19,906 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:37:20,133 - INFO - 127.0.0.1 - - [11/May/2026 19:37:20] "GET / HTTP/1.1" 200 -
+2026-05-11 19:37:23,332 - INFO - 127.0.0.1 - - [11/May/2026 19:37:23] "[33mGET /login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:37:26,865 - INFO - 127.0.0.1 - - [11/May/2026 19:37:26] "[33mGET /cadastro_login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:37:30,703 - INFO - 127.0.0.1 - - [11/May/2026 19:37:30] "[33mGET /cadastro_login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:40:35,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:40:35,567 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:40:39,097 - INFO - 127.0.0.1 - - [11/May/2026 19:40:39] "GET / HTTP/1.1" 200 -
+2026-05-11 19:40:40,906 - INFO - 127.0.0.1 - - [11/May/2026 19:40:40] "[33mGET /sistema/templates/login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:40:43,666 - INFO - 127.0.0.1 - - [11/May/2026 19:40:43] "[33mGET /sistema/templates/cadastro_login.html HTTP/1.1[0m" 404 -
+2026-05-11 19:41:14,167 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:41:14,168 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:41:16,730 - INFO - 127.0.0.1 - - [11/May/2026 19:41:16] "GET / HTTP/1.1" 200 -
+2026-05-11 19:41:17,412 - INFO - 127.0.0.1 - - [11/May/2026 19:41:17] "GET / HTTP/1.1" 200 -
+2026-05-11 19:41:18,346 - INFO - 127.0.0.1 - - [11/May/2026 19:41:18] "GET / HTTP/1.1" 200 -
+2026-05-11 19:41:18,677 - INFO - 127.0.0.1 - - [11/May/2026 19:41:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:41:20,231 - INFO - 127.0.0.1 - - [11/May/2026 19:41:20] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:41:20,388 - INFO - 127.0.0.1 - - [11/May/2026 19:41:20] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 19:41:25,077 - INFO - 127.0.0.1 - - [11/May/2026 19:41:25] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:41:59,813 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:41:59,814 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:42:02,647 - INFO - 127.0.0.1 - - [11/May/2026 19:42:02] "GET / HTTP/1.1" 200 -
+2026-05-11 19:42:03,935 - INFO - 127.0.0.1 - - [11/May/2026 19:42:03] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:42:07,808 - INFO - 127.0.0.1 - - [11/May/2026 19:42:07] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:44:23,880 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:44:23,881 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:44:26,837 - INFO - 127.0.0.1 - - [11/May/2026 19:44:26] "GET / HTTP/1.1" 200 -
+2026-05-11 19:44:27,852 - INFO - 127.0.0.1 - - [11/May/2026 19:44:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:44:29,396 - INFO - 127.0.0.1 - - [11/May/2026 19:44:29] "GET / HTTP/1.1" 200 -
+2026-05-11 19:44:29,600 - INFO - 127.0.0.1 - - [11/May/2026 19:44:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:44:30,819 - INFO - 127.0.0.1 - - [11/May/2026 19:44:30] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:44:33,842 - INFO - 127.0.0.1 - - [11/May/2026 19:44:33] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:44:33,981 - INFO - 127.0.0.1 - - [11/May/2026 19:44:33] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 19:44:37,412 - INFO - 127.0.0.1 - - [11/May/2026 19:44:37] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:44:41,603 - INFO - 127.0.0.1 - - [11/May/2026 19:44:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 19:48:09,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:48:09,515 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:48:15,548 - INFO - 127.0.0.1 - - [11/May/2026 19:48:15] "GET / HTTP/1.1" 200 -
+2026-05-11 19:48:15,795 - INFO - 127.0.0.1 - - [11/May/2026 19:48:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:48:15,955 - INFO - 127.0.0.1 - - [11/May/2026 19:48:15] "GET / HTTP/1.1" 200 -
+2026-05-11 19:48:16,290 - INFO - 127.0.0.1 - - [11/May/2026 19:48:16] "GET / HTTP/1.1" 200 -
+2026-05-11 19:48:17,121 - INFO - 127.0.0.1 - - [11/May/2026 19:48:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:48:17,535 - INFO - 127.0.0.1 - - [11/May/2026 19:48:17] "[33mGET /pagina_login HTTP/1.1[0m" 404 -
+2026-05-11 19:48:20,719 - INFO - 127.0.0.1 - - [11/May/2026 19:48:20] "[33mGET /cadastro_login HTTP/1.1[0m" 404 -
+2026-05-11 19:49:21,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:49:21,551 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:49:23,166 - INFO - 127.0.0.1 - - [11/May/2026 19:49:23] "GET / HTTP/1.1" 200 -
+2026-05-11 19:49:23,418 - INFO - 127.0.0.1 - - [11/May/2026 19:49:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:49:24,484 - INFO - 127.0.0.1 - - [11/May/2026 19:49:24] "[33mGET /criar_login HTTP/1.1[0m" 404 -
+2026-05-11 19:49:26,331 - INFO - 127.0.0.1 - - [11/May/2026 19:49:26] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:49:26,462 - INFO - 127.0.0.1 - - [11/May/2026 19:49:26] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 19:49:28,648 - INFO - 127.0.0.1 - - [11/May/2026 19:49:28] "[33mGET /criar_login HTTP/1.1[0m" 404 -
+2026-05-11 19:49:31,261 - INFO - 127.0.0.1 - - [11/May/2026 19:49:31] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:49:31,293 - INFO - 127.0.0.1 - - [11/May/2026 19:49:31] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 19:51:45,857 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 19:51:45,858 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 19:51:48,975 - INFO - 127.0.0.1 - - [11/May/2026 19:51:48] "GET / HTTP/1.1" 200 -
+2026-05-11 19:51:49,660 - INFO - 127.0.0.1 - - [11/May/2026 19:51:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 19:51:51,131 - INFO - 127.0.0.1 - - [11/May/2026 19:51:51] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:51:51,316 - INFO - 127.0.0.1 - - [11/May/2026 19:51:51] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 19:51:53,300 - INFO - 127.0.0.1 - - [11/May/2026 19:51:53] "GET /criar-login HTTP/1.1" 200 -
+2026-05-11 19:51:53,351 - INFO - 127.0.0.1 - - [11/May/2026 19:51:53] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-05-11 19:53:50,065 - INFO - 127.0.0.1 - - [11/May/2026 19:53:50] "GET /login HTTP/1.1" 200 -
+2026-05-11 19:53:50,102 - INFO - 127.0.0.1 - - [11/May/2026 19:53:50] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 19:53:52,374 - INFO - 127.0.0.1 - - [11/May/2026 19:53:52] "GET /criar-login HTTP/1.1" 200 -
+2026-05-11 19:53:52,568 - INFO - 127.0.0.1 - - [11/May/2026 19:53:52] "[36mGET /static/js/cadastro_login.js HTTP/1.1[0m" 304 -
+2026-05-11 20:04:09,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:04:09,503 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:04:11,539 - INFO - 127.0.0.1 - - [11/May/2026 20:04:11] "GET / HTTP/1.1" 200 -
+2026-05-11 20:04:13,326 - INFO - 127.0.0.1 - - [11/May/2026 20:04:13] "GET / HTTP/1.1" 200 -
+2026-05-11 20:04:13,513 - INFO - 127.0.0.1 - - [11/May/2026 20:04:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:04:15,618 - INFO - 127.0.0.1 - - [11/May/2026 20:04:15] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:04:15,784 - INFO - 127.0.0.1 - - [11/May/2026 20:04:15] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:04:26,453 - INFO - 127.0.0.1 - - [11/May/2026 20:04:26] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:04:32,967 - INFO - 127.0.0.1 - - [11/May/2026 20:04:32] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:04:33,013 - INFO - 127.0.0.1 - - [11/May/2026 20:04:33] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 20:04:45,966 - INFO - 127.0.0.1 - - [11/May/2026 20:04:45] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2026-05-11 20:04:52,294 - INFO - 127.0.0.1 - - [11/May/2026 20:04:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:05:15,125 - INFO - 127.0.0.1 - - [11/May/2026 20:05:15] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:21,085 - INFO - 127.0.0.1 - - [11/May/2026 20:05:21] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:21,930 - INFO - 127.0.0.1 - - [11/May/2026 20:05:21] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:22,504 - INFO - 127.0.0.1 - - [11/May/2026 20:05:22] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:22,748 - INFO - 127.0.0.1 - - [11/May/2026 20:05:22] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:22,937 - INFO - 127.0.0.1 - - [11/May/2026 20:05:22] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:05:24,722 - INFO - 127.0.0.1 - - [11/May/2026 20:05:24] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:05:24,857 - INFO - 127.0.0.1 - - [11/May/2026 20:05:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:05:24,857 - INFO - 127.0.0.1 - - [11/May/2026 20:05:24] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:05:33,559 - INFO - 127.0.0.1 - - [11/May/2026 20:05:33] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:06:03,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:06:03,966 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:06:08,068 - INFO - 127.0.0.1 - - [11/May/2026 20:06:08] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:06:08,216 - INFO - 127.0.0.1 - - [11/May/2026 20:06:08] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:06:18,694 - INFO - 127.0.0.1 - - [11/May/2026 20:06:18] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:06:34,515 - INFO - 127.0.0.1 - - [11/May/2026 20:06:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:07:18,539 - INFO - 127.0.0.1 - - [11/May/2026 20:07:18] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:07:18,624 - INFO - 127.0.0.1 - - [11/May/2026 20:07:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:07:18,662 - INFO - 127.0.0.1 - - [11/May/2026 20:07:18] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:07:28,957 - INFO - 127.0.0.1 - - [11/May/2026 20:07:28] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:07:46,540 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:07:46,541 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:07:48,441 - INFO - 127.0.0.1 - - [11/May/2026 20:07:48] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:07:48,510 - INFO - 127.0.0.1 - - [11/May/2026 20:07:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:07:48,664 - INFO - 127.0.0.1 - - [11/May/2026 20:07:48] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:07:48,795 - INFO - 127.0.0.1 - - [11/May/2026 20:07:48] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:07:49,007 - INFO - 127.0.0.1 - - [11/May/2026 20:07:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:07:49,017 - INFO - 127.0.0.1 - - [11/May/2026 20:07:49] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:07:49,795 - INFO - 127.0.0.1 - - [11/May/2026 20:07:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:08:11,179 - INFO - 127.0.0.1 - - [11/May/2026 20:08:11] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:08:11,301 - INFO - 127.0.0.1 - - [11/May/2026 20:08:11] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:08:11,387 - INFO - 127.0.0.1 - - [11/May/2026 20:08:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:08:12,317 - INFO - 127.0.0.1 - - [11/May/2026 20:08:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:08:19,696 - INFO - 127.0.0.1 - - [11/May/2026 20:08:19] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:08:19,819 - INFO - 127.0.0.1 - - [11/May/2026 20:08:19] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:08:19,901 - INFO - 127.0.0.1 - - [11/May/2026 20:08:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:08:20,804 - INFO - 127.0.0.1 - - [11/May/2026 20:08:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:08:26,856 - INFO - 127.0.0.1 - - [11/May/2026 20:08:26] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:08:26,980 - INFO - 127.0.0.1 - - [11/May/2026 20:08:26] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:08:27,038 - INFO - 127.0.0.1 - - [11/May/2026 20:08:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:08:28,018 - INFO - 127.0.0.1 - - [11/May/2026 20:08:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:08:53,675 - INFO - 127.0.0.1 - - [11/May/2026 20:08:53] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:09:23,082 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:09:23,082 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:09:24,696 - INFO - 127.0.0.1 - - [11/May/2026 20:09:24] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:09:24,862 - INFO - 127.0.0.1 - - [11/May/2026 20:09:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:09:24,971 - INFO - 127.0.0.1 - - [11/May/2026 20:09:24] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:09:25,948 - INFO - 127.0.0.1 - - [11/May/2026 20:09:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:09:34,811 - INFO - 127.0.0.1 - - [11/May/2026 20:09:34] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:13:13,688 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:13:13,689 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:13:16,396 - INFO - 127.0.0.1 - - [11/May/2026 20:13:16] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:13:16,513 - INFO - 127.0.0.1 - - [11/May/2026 20:13:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-05-11 20:13:16,612 - INFO - 127.0.0.1 - - [11/May/2026 20:13:16] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:13:17,562 - INFO - 127.0.0.1 - - [11/May/2026 20:13:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-11 20:13:26,566 - INFO - 127.0.0.1 - - [11/May/2026 20:13:26] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:13:26,596 - INFO - 127.0.0.1 - - [11/May/2026 20:13:26] "GET /index HTTP/1.1" 200 -
+2026-05-11 20:13:26,681 - INFO - 127.0.0.1 - - [11/May/2026 20:13:26] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 20:13:26,686 - INFO - 127.0.0.1 - - [11/May/2026 20:13:26] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 20:13:26,744 - INFO - 127.0.0.1 - - [11/May/2026 20:13:26] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-11 20:29:52,235 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-11 20:29:52,236 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-11 20:29:54,480 - INFO - 127.0.0.1 - - [11/May/2026 20:29:54] "GET /index HTTP/1.1" 200 -
+2026-05-11 20:29:54,701 - INFO - 127.0.0.1 - - [11/May/2026 20:29:54] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 20:29:54,702 - INFO - 127.0.0.1 - - [11/May/2026 20:29:54] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 20:29:54,722 - INFO - 127.0.0.1 - - [11/May/2026 20:29:54] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-11 20:29:57,188 - INFO - 127.0.0.1 - - [11/May/2026 20:29:57] "GET /index HTTP/1.1" 200 -
+2026-05-11 20:29:57,255 - INFO - 127.0.0.1 - - [11/May/2026 20:29:57] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 20:29:57,256 - INFO - 127.0.0.1 - - [11/May/2026 20:29:57] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 20:29:57,271 - INFO - 127.0.0.1 - - [11/May/2026 20:29:57] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-11 20:29:58,371 - INFO - 127.0.0.1 - - [11/May/2026 20:29:58] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:29:59,451 - INFO - 127.0.0.1 - - [11/May/2026 20:29:59] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:29:59,482 - INFO - 127.0.0.1 - - [11/May/2026 20:29:59] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-11 20:30:00,308 - INFO - 127.0.0.1 - - [11/May/2026 20:30:00] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:30:00,360 - INFO - 127.0.0.1 - - [11/May/2026 20:30:00] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 20:30:00,654 - INFO - 127.0.0.1 - - [11/May/2026 20:30:00] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:30:00,715 - INFO - 127.0.0.1 - - [11/May/2026 20:30:00] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 20:30:05,176 - INFO - 127.0.0.1 - - [11/May/2026 20:30:05] "[33mGET /login-page HTTP/1.1[0m" 404 -
+2026-05-11 20:30:07,399 - INFO - 127.0.0.1 - - [11/May/2026 20:30:07] "GET /criar-login HTTP/1.1" 200 -
+2026-05-11 20:30:07,460 - INFO - 127.0.0.1 - - [11/May/2026 20:30:07] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-05-11 20:30:17,512 - INFO - 127.0.0.1 - - [11/May/2026 20:30:17] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-05-11 20:30:17,538 - INFO - 127.0.0.1 - - [11/May/2026 20:30:17] "GET / HTTP/1.1" 200 -
+2026-05-11 20:30:25,983 - INFO - 127.0.0.1 - - [11/May/2026 20:30:25] "GET /login HTTP/1.1" 200 -
+2026-05-11 20:30:26,048 - INFO - 127.0.0.1 - - [11/May/2026 20:30:26] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-11 20:30:33,877 - INFO - 127.0.0.1 - - [11/May/2026 20:30:33] "POST /login HTTP/1.1" 200 -
+2026-05-11 20:30:33,904 - INFO - 127.0.0.1 - - [11/May/2026 20:30:33] "GET /index HTTP/1.1" 200 -
+2026-05-11 20:30:33,979 - INFO - 127.0.0.1 - - [11/May/2026 20:30:33] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-11 20:30:33,980 - INFO - 127.0.0.1 - - [11/May/2026 20:30:33] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-11 20:30:34,014 - INFO - 127.0.0.1 - - [11/May/2026 20:30:34] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:39,966 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:19:39,968 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:19:41,575 - INFO - 127.0.0.1 - - [12/May/2026 12:19:41] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:41,772 - INFO - 127.0.0.1 - - [12/May/2026 12:19:41] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:41,794 - INFO - 127.0.0.1 - - [12/May/2026 12:19:41] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:41,816 - INFO - 127.0.0.1 - - [12/May/2026 12:19:41] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:41,932 - INFO - 127.0.0.1 - - [12/May/2026 12:19:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:19:42,842 - INFO - 127.0.0.1 - - [12/May/2026 12:19:42] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:42,901 - INFO - 127.0.0.1 - - [12/May/2026 12:19:42] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:42,930 - INFO - 127.0.0.1 - - [12/May/2026 12:19:42] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:42,994 - INFO - 127.0.0.1 - - [12/May/2026 12:19:42] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:43,650 - INFO - 127.0.0.1 - - [12/May/2026 12:19:43] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:43,678 - INFO - 127.0.0.1 - - [12/May/2026 12:19:43] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:43,689 - INFO - 127.0.0.1 - - [12/May/2026 12:19:43] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:43,748 - INFO - 127.0.0.1 - - [12/May/2026 12:19:43] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:44,373 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:44,430 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:44,431 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:44,451 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:44,766 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:44,800 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:44,814 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:44,833 - INFO - 127.0.0.1 - - [12/May/2026 12:19:44] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:49,348 - INFO - 127.0.0.1 - - [12/May/2026 12:19:49] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:49,394 - INFO - 127.0.0.1 - - [12/May/2026 12:19:49] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-12 12:19:49,398 - INFO - 127.0.0.1 - - [12/May/2026 12:19:49] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-05-12 12:19:49,913 - INFO - 127.0.0.1 - - [12/May/2026 12:19:49] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:19:50,028 - INFO - 127.0.0.1 - - [12/May/2026 12:19:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:19:51,483 - INFO - 127.0.0.1 - - [12/May/2026 12:19:51] "GET /index HTTP/1.1" 200 -
+2026-05-12 12:19:51,514 - INFO - 127.0.0.1 - - [12/May/2026 12:19:51] "[36mGET /static/css/estilos.css HTTP/1.1[0m" 304 -
+2026-05-12 12:19:51,553 - INFO - 127.0.0.1 - - [12/May/2026 12:19:51] "[36mGET /static/js/lista.js HTTP/1.1[0m" 304 -
+2026-05-12 12:19:51,632 - INFO - 127.0.0.1 - - [12/May/2026 12:19:51] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-05-12 12:20:03,832 - INFO - 127.0.0.1 - - [12/May/2026 12:20:03] "GET / HTTP/1.1" 200 -
+2026-05-12 12:27:36,484 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:27:36,484 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:27:41,747 - INFO - 127.0.0.1 - - [12/May/2026 12:27:41] "GET / HTTP/1.1" 200 -
+2026-05-12 12:27:41,909 - INFO - 127.0.0.1 - - [12/May/2026 12:27:41] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-12 12:27:43,059 - INFO - 127.0.0.1 - - [12/May/2026 12:27:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:27:48,647 - INFO - 127.0.0.1 - - [12/May/2026 12:27:48] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:27:48,720 - INFO - 127.0.0.1 - - [12/May/2026 12:27:48] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-12 12:28:23,209 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:28:23,210 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:28:24,646 - INFO - 127.0.0.1 - - [12/May/2026 12:28:24] "GET / HTTP/1.1" 200 -
+2026-05-12 12:28:24,793 - INFO - 127.0.0.1 - - [12/May/2026 12:28:24] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-05-12 12:28:25,483 - INFO - 127.0.0.1 - - [12/May/2026 12:28:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:28:26,640 - INFO - 127.0.0.1 - - [12/May/2026 12:28:26] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:28:26,726 - INFO - 127.0.0.1 - - [12/May/2026 12:28:26] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2026-05-12 12:29:01,571 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:29:01,572 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:29:02,903 - INFO - 127.0.0.1 - - [12/May/2026 12:29:02] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:29:03,092 - INFO - 127.0.0.1 - - [12/May/2026 12:29:03] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-12 12:29:03,376 - INFO - 127.0.0.1 - - [12/May/2026 12:29:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:29:20,530 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:29:20,531 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:29:21,973 - INFO - 127.0.0.1 - - [12/May/2026 12:29:21] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:29:22,119 - INFO - 127.0.0.1 - - [12/May/2026 12:29:22] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-12 12:29:22,280 - INFO - 127.0.0.1 - - [12/May/2026 12:29:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:35:53,381 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.175:5000
+2026-05-12 12:35:53,382 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-12 12:35:56,441 - INFO - 127.0.0.1 - - [12/May/2026 12:35:56] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:35:56,588 - INFO - 127.0.0.1 - - [12/May/2026 12:35:56] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-05-12 12:35:57,694 - INFO - 127.0.0.1 - - [12/May/2026 12:35:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-12 12:35:59,823 - INFO - 127.0.0.1 - - [12/May/2026 12:35:59] "GET /login HTTP/1.1" 200 -
+2026-05-12 12:35:59,863 - INFO - 127.0.0.1 - - [12/May/2026 12:35:59] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -

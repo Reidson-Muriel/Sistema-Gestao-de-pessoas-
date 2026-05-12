@@ -25,6 +25,18 @@ def criar_tabela(conn):
     conn.commit()
     cursor.close()
 
+def criar_tabela_usuarios(conn):
+    cursor = conn.cursor()
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS usuario (
+                            id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            username text unique,
+                            password text
+                    )
+                   """)
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 def reset_BD(conn):
     cursor = conn.cursor()

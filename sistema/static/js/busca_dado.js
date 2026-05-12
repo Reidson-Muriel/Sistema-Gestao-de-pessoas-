@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Contato nao encontrado!");
                 return;
             }
-            const contato = await resposta.json();
-            contatoAtual = contato.data;
-            console.log(contatoAtual);
+            const contatoresposta = await resposta.json();
+            const contato = contatoresposta.message;
+            contatoAtual = contato;
 
 
             const tbody = document.getElementById("busca_contato");
@@ -27,17 +27,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const tr = document.createElement("tr");
             tr.innerHTML = `
-                        <td>${contato.data.id}</td>
-                        <td>${contato.data.nome}</td>
-                        <td>${contato.data.idade}</td>
-                        <td>${contato.data.telefone}</td>    
-                        <td>${contato.data.email}</td>    
-                        <td>${contato.data.endereco}</td>    
-                        <td>${contato.data.observacao}</td>    
+                        <td>${contato.id}</td>
+                        <td>${contato.nome}</td>
+                        <td>${contato.idade}</td>
+                        <td>${contato.telefone}</td>    
+                        <td>${contato.email}</td>    
+                        <td>${contato.endereco}</td>    
+                        <td>${contato.observacao}</td>    
                         <td>
                             <div class="acoes">
                                 <button class="btn btn-primary me-1" onclick="editar()">Editar</button>
-                                <button class="btn btn-danger " onclick="excluir(${contato.data.id})">Excluir</button>
+                                <button class="btn btn-danger " onclick="excluir(${contato.id})">Excluir</button>
                             </div>
                         </td>
             `;

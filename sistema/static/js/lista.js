@@ -6,7 +6,7 @@ async function listarContatos() {
 
    
 
-    const contatos = resultado.data;
+    const contatos = resultado.message;
 
     if(!Array.isArray(contatos)){
         console.error("Dados nao e array");

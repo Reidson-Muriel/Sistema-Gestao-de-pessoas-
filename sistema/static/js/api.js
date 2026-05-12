@@ -5,7 +5,7 @@ async function listarContatos() {
     const resposta = await fetch(api_url);
     const resultado = await resposta.json(); 
 
-    const contatos = resultado.data;
+    const contatos = resultado.message;
 
     if(!Array.isArray(contatos)){
         return;
@@ -50,7 +50,7 @@ document.getElementById("form_contato").addEventListener("submit", async (e) =>{
             e.target.reset();   
         }else{
             const erro = await resposta.json();
-            alert(erro.ERROR || erro.erro);
+            alert(erro.message);
         }
 
 });

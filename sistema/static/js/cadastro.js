@@ -20,7 +20,7 @@ document.getElementById("form_contato").addEventListener("submit", async (e) =>{
 
         const resultado = await resposta.json();
         if (!resposta.ok){
-            alert(resultado.error);
+            alert(resultado.message);
             return;  
         }
 
