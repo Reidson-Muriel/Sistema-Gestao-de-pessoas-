@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, session, redirect
 from flask_cors import CORS
 from sistema.routes.contatos_routes import contato_bp
 from sistema.routes.usuarios_routes import usuario_bp
@@ -19,12 +19,19 @@ def home():
     return render_template("home.html")
 @app.route("/index")
 def index():
+    if "usuario" not in session:
+        return redirect("/login")
+        
     return render_template("index.html")
 @app.route("/buscar")
 def buscar():
+    if "usuario" not in session:
+        return redirect("/login")
     return render_template("buscar_dados.html")
 @app.route("/cadastro")
 def cadastro():
+    if "usuario" not in session:
+        return redirect("/login")
     return render_template("cadastro.html")
 @app.route("/login")
 def pagina_login():
@@ -32,6 +39,15 @@ def pagina_login():
 @app.route("/criar-login")
 def cadastro_login():
     return render_template("cadastro_login.html")
+@app.route("/logout")
+def logout():
+    session.pop("usuario", None)
+    return redirect("/login")
+# proteger o login em cache
+@app.after_request
+def add_header(response):
+    response.headers["Cache-Control"] = "no-store"
+    return response
     
 ## rota para exercutar no dispositivo moveis
 if __name__ == "__main__":
