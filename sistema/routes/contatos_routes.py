@@ -13,7 +13,7 @@ def get_contato():
     try:
         contato = obter_contatos()
         if contato:
-            return resp_sucess(contato, 200)
+            return resp_sucess(contato, status=200)
         else:
             return resp_erro("Nenhum contato encontrado", 404)
     except Exception as e:
@@ -27,7 +27,7 @@ def get_contato_id(id):
     try:
         buscar = buscar_contatos_id(id)
         if buscar:
-            return resp_sucess(buscar, 200)
+            return resp_sucess(buscar, status=200)
         else:
             return resp_erro("Contato nao encontrado", 404)
     except Exception as e:

@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- 
+
     <title>Login</title>
 </head>
 
-<body>
-    <h2>Login</h2>
-    <form id="form-login">
-        <input type="text" id="username" placeholder="Nome Usuário" <br><br>
-        <input type="password" id="password" placeholder="Senha do usuário" <br><br>
-        <button type="submit">Entrar</button>
-    </form>
+<body class="container">
+    <div class="tela-login" style="border: 2px solid red;">
+        <div class="titulo">
+            <h2>Login</h2>
+        </div>
+        <div class="login-cadastro">
+            <form id="form-login" class="form-login">
+                <label for="username">Usuario</label>
+                <input type="text" id="username" placeholder="Digite o usuario">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite a senha">
+                <img class="show-password" id="show-password" src="/static/img/show-password.png">
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
     <p id="msg"></p>
 </body>

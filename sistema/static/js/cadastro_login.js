@@ -3,7 +3,7 @@ document.getElementById("form-login-cadastro").addEventListener("submit", async 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const resposta = await fetch('/cadastro-usuarios', {
+    const resposta = await fetch("/cadastro-usuarios", {
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({username, password})
@@ -14,6 +14,19 @@ document.getElementById("form-login-cadastro").addEventListener("submit", async 
         window.location.href = "/";
     }else{
         document.getElementById("msg").innerText = dados.message;
+    }
+
+});
+
+document.getElementById("show-password").addEventListener("click", async (e) =>{
+    e.preventDefault();
+    const password = document.getElementById("password");
+    const showPassword = document.getElementById("show-password");
+
+    if (password.type == "password") {
+         password.type = "text";
+    }else{
+         password.type = "password";
     }
 
 });

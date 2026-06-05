@@ -7,25 +7,28 @@ db_path = os.path.join(base_dir, "agenda.db")
 def conectar():
     return sqlite3.connect(db_path)
 
-def criar_tabela(conn):
+def criar_tabela():
+    conn = conectar()
     cursor = conn.cursor()
 
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS contatos (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        nome TEXT,
-        telefone TEXT,
-        email TEXT,
-        endereco TEXT,
-        observacao TEXT,
-        data_nascimento TEXT
-    )
-    """)
+                    CREATE TABLE IF NOT EXISTS contatos (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        nome TEXT,
+                        telefone TEXT,
+                        email TEXT,
+                        endereco TEXT,
+                        observacao TEXT,
+                        data_nascimento TEXT
+                    )
+                    """)
 
     conn.commit()
     cursor.close()
+    conn.close()
 
-def criar_tabela_usuarios(conn):
+def criar_tabela_usuarios():
+    conn = conectar()
     cursor = conn.cursor()
 
     cursor.execute("""CREATE TABLE IF NOT EXISTS usuario (

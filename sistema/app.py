@@ -6,9 +6,8 @@ from sistema.routes.usuarios_routes import usuario_bp
 from sistema.database.conexao import criar_tabela, criar_tabela_usuarios, conectar
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
-conn = conectar()
-criar_tabela(conn)
-criar_tabela_usuarios(conn)
+criar_tabela()
+criar_tabela_usuarios()
 app.secret_key = "chave_secreta"
 CORS(app)
 app.register_blueprint(contato_bp)
@@ -42,8 +41,9 @@ def cadastro_login():
 @app.route("/logout")
 def logout():
     session.pop("usuario", None)
-    return redirect("/login")
+    return redirect("/")
 # proteger o login em cache
+
 @app.after_request
 def add_header(response):
     response.headers["Cache-Control"] = "no-store"

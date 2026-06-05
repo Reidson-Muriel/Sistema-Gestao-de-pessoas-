@@ -22,3 +22,16 @@ document.getElementById("form-login").addEventListener("submit", async function(
     }
     
 });
+
+document.getElementById("show-password").addEventListener("click", async (e) =>{
+    e.preventDefault();
+    const password = document.getElementById("password");
+    const showPassword = document.getElementById("show-password");
+
+    if (password.type == "password") {
+        password.type = "text";
+    }else{
+        password.type = "password";
+    }
+
+});

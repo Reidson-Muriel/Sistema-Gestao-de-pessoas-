@@ -11,7 +11,7 @@ print("Lembre-se que isso vão apagar todos os dados")
 confirmar = input("Digite CONFIRMAR para resetar-los: ")
 if confirmar.upper() == "CONFIRMAR":
     conn = conectar()
-    criar_tabela(conn)
+    criar_tabela()
     reset_BD(conn)
     conn.close()
     print("Banco resetado com sucesso!")
