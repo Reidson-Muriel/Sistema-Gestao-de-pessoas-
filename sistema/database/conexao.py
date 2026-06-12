@@ -34,7 +34,8 @@ def criar_tabela_usuarios():
     cursor.execute("""CREATE TABLE IF NOT EXISTS usuario (
                             id INTEGER PRIMARY KEY AUTOINCREMENT,
                             username text unique,
-                            password text
+                            password text,
+                            cargo text
                     )
                    """)
     conn.commit()
@@ -44,8 +45,10 @@ def criar_tabela_usuarios():
 def reset_BD(conn):
     cursor = conn.cursor()
 
-    cursor.execute("DELETE FROM contatos")
-    cursor.execute("DELETE FROM sqlite_sequence WHERE name='contatos'")
+    cursor.executescript("""DELETE FROM contatos;
+                            DELETE FROM usuario;
+                        """)
+    cursor.execute("DELETE FROM sqlite_sequence WHERE name in ('contatos', 'usuario')")
 
     conn.commit()
     cursor.close()

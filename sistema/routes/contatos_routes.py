@@ -49,13 +49,15 @@ def criar_contato():
 #rota para atualizar o contato read/update
 @contato_bp.route("/contatos/<int:id>", methods=["PUT"])
 def atualizar_contato(id):  
+    if session["cargo"] != "admin":
+        return resp_erro("Acesso negado", 403)
     if "usuario" not in session:
         return resp_erro("Não autorizado", 401)
     try:
         dados = request.get_json(silent=True)
 
         if not dados:
-            return resp_erro("dados invalidos", 400)
+            return resp_erro("Dados invalidos", 400)
 
         return atualizar_contatos(id, dados)
     except Exception as e:
@@ -64,8 +66,11 @@ def atualizar_contato(id):
 # rota para deletar o contato delete 
 @contato_bp.route("/contatos/<int:id>", methods=["DELETE"])
 def deletar_contato(id):
+    print(session.get("cargo"))
     if "usuario" not in session:
         return resp_erro("Não autorizado", 401)
+    if session["cargo"] != "admin":
+        return resp_erro("Acesso negado", 403)
     try:
         return deletar_contatos(id)
     except Exception as erro:

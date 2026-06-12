@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(res => {
                 if (!res.ok) {
                     alert("Erro ao deletar");
+                    return;
                 }
                 alert("Excluido com sucesso!");
 

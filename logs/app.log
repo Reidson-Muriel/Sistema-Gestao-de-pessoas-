@@ -9963,3 +9963,772 @@ sqlite3.OperationalError: database is locked
 2026-06-05 14:42:55,916 - INFO - 127.0.0.1 - - [05/Jun/2026 14:42:55] "GET /static/js/login.js HTTP/1.1" 200 -
 2026-06-05 14:42:55,917 - INFO - 127.0.0.1 - - [05/Jun/2026 14:42:55] "GET /static/css/estilos.css HTTP/1.1" 200 -
 2026-06-05 14:42:57,251 - INFO - 127.0.0.1 - - [05/Jun/2026 14:42:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:37:24,963 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:37:24,964 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:37:28,211 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:28] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:37:28,438 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:28] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:37:28,438 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:28] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:37:28,439 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:28] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:37:28,782 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:37:35,494 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:37:35,502 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:37:40,149 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:40] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:37:40,178 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:40] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:37:40,196 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:40] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:37:40,196 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:40] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:37:41,087 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:41] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:37:41,107 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:41] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:37:41,123 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:41] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:37:41,123 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:41] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:43:32,186 - INFO - 127.0.0.1 - - [06/Jun/2026 20:43:32] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:43:32,206 - INFO - 127.0.0.1 - - [06/Jun/2026 20:43:32] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:37:42,084 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:42] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:37:42,085 - INFO - 127.0.0.1 - - [06/Jun/2026 20:37:42] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:38:51,232 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:38:51,234 - INFO - 127.0.0.1 - - [06/Jun/2026 20:38:51] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:38:56,130 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:38:56,132 - INFO - 127.0.0.1 - - [06/Jun/2026 20:38:56] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:38:59,389 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:38:59,390 - INFO - 127.0.0.1 - - [06/Jun/2026 20:38:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:38:59,904 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:38:59,905 - INFO - 127.0.0.1 - - [06/Jun/2026 20:38:59] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:00,095 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:39:00,097 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:00,297 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:39:00,299 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:00,480 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:39:00,482 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:00,680 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:39:00,686 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:00,873 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:39:00,875 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:39:03,071 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:03] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:39:03,073 - INFO - 127.0.0.1 - - [06/Jun/2026 20:39:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:40:16,051 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:40:16,052 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:40:18,110 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:40:18,163 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:40:18,184 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:40:18,184 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:40:18,224 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:40:18,986 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:40:30,710 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:40:30,716 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:30] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:40:35,091 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:40:35,093 - INFO - 127.0.0.1 - - [06/Jun/2026 20:40:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:42:35,407 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:42:35,408 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:42:38,118 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:42:38,168 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:42:38,176 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:42:38,177 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:42:38,214 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:42:38,624 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:42:43,513 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:42:43,518 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:43] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:42:45,838 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:42:45,840 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:45] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:42:49,636 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:42:49,638 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:49] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:42:51,701 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:51] "GET / HTTP/1.1" 200 -
+2026-06-06 20:42:51,742 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:51] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:42:51,763 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:42:51,766 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:51] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-06 20:42:53,530 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:53] "GET /criar-login HTTP/1.1" 200 -
+2026-06-06 20:42:53,576 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:53] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:42:53,596 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:42:53,600 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:53] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:42:53,602 - INFO - 127.0.0.1 - - [06/Jun/2026 20:42:53] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-06-06 20:43:07,212 - ERROR - Exception on /cadastro-usuarios [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 20, in cadastro_usuario
+    cursor.execute("""INSERT INTO  usuario (username, password, cargo) values (?,?,'admin')""", (username, password))
+sqlite3.OperationalError: table usuario has no column named cargo
+2026-06-06 20:43:07,214 - INFO - 127.0.0.1 - - [06/Jun/2026 20:43:07] "[35m[1mPOST /cadastro-usuarios HTTP/1.1[0m" 500 -
+2026-06-06 20:44:50,562 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:44:50,562 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:44:54,848 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:54] "GET /criar-login HTTP/1.1" 200 -
+2026-06-06 20:44:54,900 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:54] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:44:54,917 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:54] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:44:54,918 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:54] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-06-06 20:44:54,957 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:44:55,346 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:50:47,766 - INFO - 127.0.0.1 - - [06/Jun/2026 20:50:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:44:57,646 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:44:57,648 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:57] "GET / HTTP/1.1" 200 -
+2026-06-06 20:44:57,650 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:57] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:44:58,959 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:58] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:44:59,033 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:44:59,041 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:59] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:44:59,042 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:59] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:44:59,076 - INFO - 127.0.0.1 - - [06/Jun/2026 20:44:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:45:05,955 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:45:05,961 - INFO - 127.0.0.1 - - [06/Jun/2026 20:45:05] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:45:11,115 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:45:11,117 - INFO - 127.0.0.1 - - [06/Jun/2026 20:45:11] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-06 20:46:36,351 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:46:36,352 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:51:13,302 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:51:13,302 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:53:54,839 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-06 20:53:54,840 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-06 20:54:00,455 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:00] "GET /login HTTP/1.1" 200 -
+2026-06-06 20:54:00,499 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-06 20:54:00,514 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:00] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-06 20:54:00,514 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:00] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-06 20:54:00,551 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-06 20:54:01,023 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-06 20:54:06,675 - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/reidsmuriel/.local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/reids/OneDrive/Desktop/agenda pessoa/sistema/routes/usuarios_routes.py", line 45, in login
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+sqlite3.OperationalError: no such column: cargo
+2026-06-06 20:54:06,679 - INFO - 127.0.0.1 - - [06/Jun/2026 20:54:06] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2026-06-07 19:27:14,885 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-07 19:27:14,887 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-07 19:27:18,333 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:18] "GET /login HTTP/1.1" 200 -
+2026-06-07 19:27:18,459 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:18] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-07 19:27:18,459 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:18] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-07 19:27:18,460 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:18] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:20,416 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:20] "GET /login HTTP/1.1" 200 -
+2026-06-07 19:27:20,493 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:20] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:20,501 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:20] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-07 19:27:20,538 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:20] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-07 19:27:21,152 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-07 19:27:26,855 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:26] "GET / HTTP/1.1" 200 -
+2026-06-07 19:27:26,922 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:26] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:26,967 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:26] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-07 19:27:28,974 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:28] "GET /criar-login HTTP/1.1" 200 -
+2026-06-07 19:27:29,040 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:29] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:29,044 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:29] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-07 19:27:29,046 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:29] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-06-07 19:27:43,139 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:43] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-06-07 19:27:43,167 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:43] "GET / HTTP/1.1" 200 -
+2026-06-07 19:27:43,276 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:43] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:43,283 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:43] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-07 19:27:48,991 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:48] "GET /login HTTP/1.1" 200 -
+2026-06-07 19:27:49,094 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:49] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:27:49,138 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:49] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-07 19:27:49,140 - INFO - 127.0.0.1 - - [07/Jun/2026 19:27:49] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-07 19:28:00,749 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:00] "POST /login HTTP/1.1" 200 -
+2026-06-07 19:28:00,809 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:00] "GET /index HTTP/1.1" 200 -
+2026-06-07 19:28:00,888 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:28:00,894 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:00] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-07 19:28:00,896 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:00] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-07 19:28:01,230 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:01] "GET /contatos HTTP/1.1" 200 -
+2026-06-07 19:28:07,246 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:07] "GET /buscar HTTP/1.1" 200 -
+2026-06-07 19:28:07,335 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:07] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:28:07,340 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:07] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-07 19:28:10,318 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:10] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-07 19:28:12,074 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:12] "GET /index HTTP/1.1" 200 -
+2026-06-07 19:28:12,161 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:12] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-07 19:28:12,208 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:12] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-07 19:28:12,208 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:12] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-07 19:28:12,325 - INFO - 127.0.0.1 - - [07/Jun/2026 19:28:12] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:13:34,868 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-10 21:13:34,869 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 21:07:36,075 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:36] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:36,173 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:36] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:36,174 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:36] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:36,174 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:36] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:13:39,712 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:39] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:37,936 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-10 21:07:39,519 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:39] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:39,566 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:39] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:39,597 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:39] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:39,598 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:39] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:39,714 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:39] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:40,337 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:40,406 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:40,445 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:40,446 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:40,564 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:40,835 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:40,989 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:40] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:41,072 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:41,073 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:41,219 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:41,655 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:41,729 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:41,734 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:41,736 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:41,812 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:41] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:42,202 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:42] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:13:44,656 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:44] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:13:44,690 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:44] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:13:44,691 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:44] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:13:44,829 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:44] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:42,951 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:42] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:43,040 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:43,042 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:43,044 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:43,110 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:43,418 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:07:43,500 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:43,561 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:07:43,561 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:07:43,828 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:43] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:07:47,297 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-06-10 21:13:49,661 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:49] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-06-10 21:13:49,719 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:49] "GET / HTTP/1.1" 200 -
+2026-06-10 21:13:49,779 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:49] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:13:49,822 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:49] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-10 21:07:54,197 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:54] "GET /criar-login HTTP/1.1" 200 -
+2026-06-10 21:07:54,280 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:54] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:07:54,281 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:54] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-10 21:07:54,281 - INFO - 127.0.0.1 - - [10/Jun/2026 21:07:54] "GET /static/js/cadastro_login.js HTTP/1.1" 200 -
+2026-06-10 21:08:28,971 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:28] "POST /cadastro-usuarios HTTP/1.1" 200 -
+2026-06-10 21:08:29,000 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:29] "GET / HTTP/1.1" 200 -
+2026-06-10 21:08:29,104 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:29] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:08:29,143 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:29] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-10 21:08:50,401 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:50] "GET /login HTTP/1.1" 200 -
+2026-06-10 21:08:50,519 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:50] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:08:50,522 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:50] "GET /static/img/show-password.png HTTP/1.1" 200 -
+2026-06-10 21:08:50,525 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:50] "GET /static/js/login.js HTTP/1.1" 200 -
+2026-06-10 21:08:57,337 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:57] "POST /login HTTP/1.1" 200 -
+2026-06-10 21:08:57,367 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:57] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:14:59,773 - INFO - 127.0.0.1 - - [10/Jun/2026 21:14:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:14:59,809 - INFO - 127.0.0.1 - - [10/Jun/2026 21:14:59] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:14:59,810 - INFO - 127.0.0.1 - - [10/Jun/2026 21:14:59] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:14:59,916 - INFO - 127.0.0.1 - - [10/Jun/2026 21:14:59] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-10 21:08:59,905 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:59] "GET /cadastro HTTP/1.1" 200 -
+2026-06-10 21:08:59,993 - INFO - 127.0.0.1 - - [10/Jun/2026 21:08:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:09:00,002 - INFO - 127.0.0.1 - - [10/Jun/2026 21:09:00] "GET /static/js/cadastro.js HTTP/1.1" 200 -
+2026-06-10 21:10:32,977 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:32] "[35m[1mPOST /contatos HTTP/1.1[0m" 201 -
+2026-06-10 21:10:35,541 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:35] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:35,640 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:35] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:35,641 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:35] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:35,652 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:35] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:35,711 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:35] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:38,143 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:38] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:10:38,212 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:38] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:38,219 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:38] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:10:40,535 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:40] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:16:45,163 - INFO - 127.0.0.1 - - [10/Jun/2026 21:16:45] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:10:49,975 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:49] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:50,079 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:50] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:50,118 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:50] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:50,118 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:50] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:50,226 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:50] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:52,241 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:52] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:52,295 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:52] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:52,336 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:52] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:52,336 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:52] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:52,463 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:52] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:54,180 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:54] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:54,232 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:54] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:54,269 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:54] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:54,270 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:54] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:54,396 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:54] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:55,010 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:55,084 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:55,113 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:55,114 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:55,235 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:55,659 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:55,722 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:55,723 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:55,724 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:55,886 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:55] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:10:56,271 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:56] "GET /index HTTP/1.1" 200 -
+2026-06-10 21:10:56,436 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:56] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:56,461 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:56] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-10 21:10:56,461 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:56] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-10 21:10:56,569 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:56] "GET /contatos HTTP/1.1" 200 -
+2026-06-10 21:17:00,019 - INFO - 127.0.0.1 - - [10/Jun/2026 21:17:00] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:17:00,129 - INFO - 127.0.0.1 - - [10/Jun/2026 21:17:00] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:17:00,129 - INFO - 127.0.0.1 - - [10/Jun/2026 21:17:00] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:10:59,521 - INFO - 127.0.0.1 - - [10/Jun/2026 21:10:59] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:11:10,075 - INFO - 127.0.0.1 - - [10/Jun/2026 21:11:10] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:11:14,281 - INFO - 127.0.0.1 - - [10/Jun/2026 21:11:14] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:11:14,376 - INFO - 127.0.0.1 - - [10/Jun/2026 21:11:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:11:14,421 - INFO - 127.0.0.1 - - [10/Jun/2026 21:11:14] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:11:16,297 - INFO - 127.0.0.1 - - [10/Jun/2026 21:11:16] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:13:11,867 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-10 21:13:11,868 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 21:13:14,508 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:14] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:13:14,626 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:13:14,627 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:14] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:13:15,527 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:15] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:13:15,593 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:15] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:13:15,594 - INFO - 127.0.0.1 - - [10/Jun/2026 21:13:15] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:19:20,298 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:20] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:18:45,967 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-10 21:18:45,968 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 21:18:59,028 - INFO - 127.0.0.1 - - [10/Jun/2026 21:18:59] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:18:59,143 - INFO - 127.0.0.1 - - [10/Jun/2026 21:18:59] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:18:59,143 - INFO - 127.0.0.1 - - [10/Jun/2026 21:18:59] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:19:02,503 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:02] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:19:04,905 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:04] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:19:10,498 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:10] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:19:14,412 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:14] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:19:14,466 - INFO - 127.0.0.1 - - [10/Jun/2026 21:19:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 21:21:00,972 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:00] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:21:01,132 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:01] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:21:01,133 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:01] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:21:01,241 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 21:21:11,532 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:11] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:21:14,797 - INFO - 127.0.0.1 - - [10/Jun/2026 21:21:14] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:27:35,659 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-10 21:27:35,660 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-10 21:33:41,806 - INFO - 127.0.0.1 - - [10/Jun/2026 21:33:41] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:27:39,584 - INFO - 127.0.0.1 - - [10/Jun/2026 21:27:39] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:27:39,586 - INFO - 127.0.0.1 - - [10/Jun/2026 21:27:39] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:27:39,657 - INFO - 127.0.0.1 - - [10/Jun/2026 21:27:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 21:27:42,766 - INFO - 127.0.0.1 - - [10/Jun/2026 21:27:42] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:27:44,575 - INFO - 127.0.0.1 - - [10/Jun/2026 21:27:44] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:29:29,433 - INFO - 127.0.0.1 - - [10/Jun/2026 21:29:29] "GET /buscar HTTP/1.1" 200 -
+2026-06-10 21:35:31,955 - INFO - 127.0.0.1 - - [10/Jun/2026 21:35:31] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-10 21:35:31,956 - INFO - 127.0.0.1 - - [10/Jun/2026 21:35:31] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-10 21:35:32,061 - INFO - 127.0.0.1 - - [10/Jun/2026 21:35:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-10 21:29:35,623 - INFO - 127.0.0.1 - - [10/Jun/2026 21:29:35] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-10 21:29:48,707 - INFO - 127.0.0.1 - - [10/Jun/2026 21:29:48] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:29:58,266 - INFO - 127.0.0.1 - - [10/Jun/2026 21:29:58] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-10 21:30:01,007 - INFO - 127.0.0.1 - - [10/Jun/2026 21:30:01] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:54:14,905 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-11 20:54:14,907 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-11 20:54:28,774 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:28] "GET /buscar HTTP/1.1" 200 -
+2026-06-11 20:54:28,898 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:28] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-11 20:54:28,898 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:28] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:54:29,647 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-11 20:54:32,065 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:32] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-11 20:54:36,712 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:36] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:54:39,609 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:39] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:54:41,708 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:41] "[31m[1mDELETE /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:54:43,656 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:43] "GET /index HTTP/1.1" 200 -
+2026-06-11 20:54:43,762 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:43] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-11 20:54:43,763 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:43] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-11 20:54:43,763 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:43] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:54:43,883 - INFO - 127.0.0.1 - - [11/Jun/2026 20:54:43] "GET /contatos HTTP/1.1" 200 -
+2026-06-11 21:01:23,368 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-11 21:01:23,369 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-11 20:55:22,377 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:22] "GET /buscar HTTP/1.1" 200 -
+2026-06-11 20:55:22,471 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:22] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:55:22,473 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:22] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-11 20:55:25,877 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:25] "GET /contatos/1 HTTP/1.1" 200 -
+2026-06-11 20:55:35,911 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:35] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:55:38,822 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:38] "[31m[1mPUT /contatos/1 HTTP/1.1[0m" 403 -
+2026-06-11 20:55:48,308 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:48] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:55:48,353 - INFO - 127.0.0.1 - - [11/Jun/2026 20:55:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-11 20:59:12,323 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-11 20:59:12,324 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-11 20:59:13,463 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:13] "GET /buscar HTTP/1.1" 200 -
+2026-06-11 20:59:13,523 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-11 20:59:13,578 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:13] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:59:13,580 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:13] "GET /static/js/busca_dado.js HTTP/1.1" 200 -
+2026-06-11 20:59:15,777 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:15] "GET /index HTTP/1.1" 200 -
+2026-06-11 20:59:15,895 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-06-11 20:59:15,902 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:15] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 20:59:15,917 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:15] "GET /static/js/logout.js HTTP/1.1" 200 -
+2026-06-11 20:59:15,917 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:15] "GET /static/js/lista.js HTTP/1.1" 200 -
+2026-06-11 20:59:16,250 - INFO - 127.0.0.1 - - [11/Jun/2026 20:59:16] "[33mGET /contatos HTTP/1.1[0m" 404 -
+2026-06-11 21:01:18,733 - INFO - 172.31.144.1 - - [11/Jun/2026 21:01:18] "GET / HTTP/1.1" 200 -
+2026-06-11 21:01:18,858 - INFO - 172.31.144.1 - - [11/Jun/2026 21:01:18] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 21:01:18,861 - INFO - 172.31.144.1 - - [11/Jun/2026 21:01:18] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -
+2026-06-11 21:01:20,658 - INFO - 172.31.144.1 - - [11/Jun/2026 21:01:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-11 21:14:57,460 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.158.130:5000
+2026-06-11 21:14:57,461 - INFO - [33mPress CTRL+C to quit[0m
+2026-06-11 21:09:18,757 - INFO - 172.31.144.1 - - [11/Jun/2026 21:09:18] "GET / HTTP/1.1" 200 -
+2026-06-11 21:09:18,853 - INFO - 172.31.144.1 - - [11/Jun/2026 21:09:18] "GET /static/css/estilos.css HTTP/1.1" 200 -
+2026-06-11 21:15:24,608 - INFO - 172.31.144.1 - - [11/Jun/2026 21:15:24] "GET /static/img/img-welcomes.png HTTP/1.1" 200 -

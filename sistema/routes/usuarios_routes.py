@@ -12,11 +12,12 @@ def cadastro_usuario():
     
     username = dados["username"]
     password = generate_password_hash(dados["password"])
+    cargo = "admin"
 
     conn = conectar()
     cursor = conn.cursor()
 
-    cursor.execute("""INSERT INTO  usuario (username, password) values (?,?)""", (username, password))
+    cursor.execute("""INSERT INTO  usuario (username, password, cargo) values (?,?,?)""", (username, password,cargo))
 
     conn.commit()
     cursor.close()
@@ -41,17 +42,22 @@ def login():
     conn = conectar()
     cursor = conn.cursor()
 
-    cursor.execute("SELECT username, password from usuario where username = ?", (username,))
+    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
     usuarios = cursor.fetchone()
     
     cursor.close()
     conn.close()
 
-
     if not usuarios:
         return resp_erro("Usuario não encontrado!", 401)
     
     if not check_password_hash(usuarios[1], password):
-        return resp_erro("Senha incorreto!", 401)
-    session["usuario"] = username
-    return resp_sucess("Login realizado com sucesso", 200)
+        return resp_erro("Senha incorreta!", 401)
+
+    session["usuario"] = usuarios[0]
+    session["cargo"] = usuarios[2]
+
+    if session["cargo"] == "admin":
+        return resp_sucess("admin entrou", 200)
+    else:
+        return resp_sucess("usuario entrou", 200) 
