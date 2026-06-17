@@ -12,7 +12,7 @@ def cadastro_usuario():
     
     username = dados["username"]
     password = generate_password_hash(dados["password"])
-    cargo = "admin"
+    cargo = "usuario"
 
     conn = conectar()
     cursor = conn.cursor()
