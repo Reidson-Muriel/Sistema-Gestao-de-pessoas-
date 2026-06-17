@@ -3,13 +3,15 @@ from sistema.utils.logger import logger
 from sistema.database import conexao
 from sistema.utils.response import resp_sucess, resp_erro
 from sistema.utils.validacao import validar_email, validar_idade, validar_nome, validar_telefone, calcular_idade
-def listar_contatos():
+def listar_contatos(usuario_id, cargo):
     conection = conexao.conectar()
     cursor = conection.cursor()
     try:
-
-        cursor.execute("select id, nome, telefone from contatos")
-        dados = cursor.fetchall()
+        if cargo == "admin":
+            cursor.execute("select id, nome, telefone from contatos")
+        else:
+            cursor.execute("select id, nome, telefone from contatos where usuario_id = ?", (usuario_id,))
+        dados = cursor.fetchall() 
 
 
         return dados
@@ -19,13 +21,16 @@ def listar_contatos():
         cursor.close()
         conection.close()
 
-def buscar_contato(id):
+def buscar_contato(id, usuario_id, cargo):
     conection = conexao.conectar()
     cursor = conection.cursor()
     try:
-    
-        cursor.execute("select id, nome, telefone, email, endereco, observacao, data_nascimento " \
-                        "from contatos where id = ? ", (id,))
+        if cargo ==  "admin":
+            cursor.execute("select id, nome, telefone, email, endereco, observacao, data_nascimento" \
+                           " from contatos where id = ?", (id,))
+        else:   
+            cursor.execute("select id, nome, telefone, email, endereco, observacao, data_nascimento, usuario_id" \
+                        " from contatos where id = ? and usuario_id = ? ", (id, usuario_id,))
         dados = cursor.fetchone()
     
         return dados
@@ -47,6 +52,7 @@ def adicionar_contato(dado):
         endereco = dado.get("endereco")
         observacao = dado.get("observacao")
         data_nascimento =  dado.get("data_nascimento")
+        usuario_id = dado.get("usuario_id")
 
         if not nome or not telefone:
             return resp_erro("Nome e telefone sao obrigatorios", 400)
@@ -68,12 +74,10 @@ def adicionar_contato(dado):
         cursor.execute("select id from contatos where telefone= ?", (telefone,))#evitar o telefone duplas
         existe = cursor.fetchone()
         if existe:
-            cursor.close()
-            conection.close()
             return resp_erro("contato ja existe", 409)
         else:
-            cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento) " \
-                           "values (?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento))
+            cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento, usuario_id) " \
+                           "values (?,?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento, usuario_id))
             conection.commit()
 
         return resp_sucess(message="Contato criado com sucesso", status=201)
@@ -127,19 +131,21 @@ def atualizar_contatos(id, dado):
         cursor.close()
         conection.close()
    
-def deletar_contatos(id):
+def deletar_contatos(id, usuario_id):
+    print("id: ",id)
+    print("usuario_id", usuario_id)
     conection = conexao.conectar()
     cursor = conection.cursor()
     try:
 
-        cursor.execute("select id from contatos where id=?", (id,))
+        cursor.execute("select id from contatos where id=? and usuario_id = ?", (id, usuario_id))
         existe = cursor.fetchone()
-
+        print("resultado:", existe)
         if existe:
-            cursor.execute("delete from contatos where id=?", (id,))
+            cursor.execute("delete from contatos where id=? and usuario_id = ?", (id, usuario_id))
+            print("delete executado")
             conection.commit()
-            cursor.close()
-            conection.close()
+            
             return resp_sucess("contato deletado com sucesso", 200)
         else:
             return resp_erro("Contato nao encontrado", 404)

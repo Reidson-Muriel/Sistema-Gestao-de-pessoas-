@@ -19,8 +19,9 @@ def criar_tabela():
                         email TEXT,
                         endereco TEXT,
                         observacao TEXT,
-                        data_nascimento TEXT
-                    )
+                        data_nascimento TEXT,
+                        usuario_id  INTERGER
+                    );
                     """)
 
     conn.commit()
@@ -36,7 +37,7 @@ def criar_tabela_usuarios():
                             username text unique,
                             password text,
                             cargo text
-                    )
+                    );
                    """)
     conn.commit()
     cursor.close()

@@ -5,9 +5,9 @@ from datetime import datetime
 
 from ..utils.validacao import calcular_idade
 
-def obter_contatos():
+def obter_contatos(usuario_id, cargo):
     try:
-        contato = listar_contatos()
+        contato = listar_contatos(usuario_id, cargo)
 
         lista = []
         for dados in contato:
@@ -18,9 +18,9 @@ def obter_contatos():
     except Exception as e:
        raise e
 
-def buscar_contatos_id(id):
+def buscar_contatos_id(id, usuario_id, cargo):
     try:
-        dados = buscar_contato(id)
+        dados = buscar_contato(id, usuario_id, cargo)
 
         if not dados:
             return None

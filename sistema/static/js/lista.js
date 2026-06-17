@@ -8,10 +8,6 @@ async function listarContatos() {
 
     const contatos = resultado.message;
 
-    if(!Array.isArray(contatos)){
-        console.error("Dados nao e array");
-        return;
-    }
     const tbody = document.getElementById("lista_contato");
     tbody.innerHTML = "";
 

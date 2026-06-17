@@ -11,7 +11,7 @@ def get_contato():
     if "usuario" not in session:
         return resp_erro("Não autorizado", 401)
     try:
-        contato = obter_contatos()
+        contato = obter_contatos(session["usuario"], session["cargo"])
         if contato:
             return resp_sucess(contato, status=200)
         else:
@@ -25,7 +25,7 @@ def get_contato_id(id):
     if "usuario" not in session:
         return resp_erro("Não autorizado", 401)
     try:
-        buscar = buscar_contatos_id(id)
+        buscar = buscar_contatos_id(id, session["usuario"], session["cargo"])
         if buscar:
             return resp_sucess(buscar, status=200)
         else:
@@ -42,6 +42,8 @@ def criar_contato():
         if not dados:
             return resp_erro("dados invalidos", 400)
 
+        dados["usuario_id"] = session["usuario"]
+        
         return adicionar_contato(dados)
     except Exception as e:
         return resp_erro("Erro ao criar contato " + str(e), 500)
@@ -66,12 +68,24 @@ def atualizar_contato(id):
 # rota para deletar o contato delete 
 @contato_bp.route("/contatos/<int:id>", methods=["DELETE"])
 def deletar_contato(id):
-    print(session.get("cargo"))
+    usuario_id = session["usuario"]
     if "usuario" not in session:
         return resp_erro("Não autorizado", 401)
     if session["cargo"] != "admin":
         return resp_erro("Acesso negado", 403)
     try:
-        return deletar_contatos(id)
+        print("entrou no delete, indo para model...")
+        return deletar_contatos(id, usuario_id)
     except Exception as erro:
+        print("erro real:", erro)
         return resp_erro("Erro ao deletar o contato" + str(erro), 500)
+
+@contato_bp.route("/me", methods=["GET"])
+def usuario_logado():
+    if "usuario" not in session:
+        return resp_erro("Não autorizado", 401)
+
+    return resp_sucess({
+        "usuario": session["usuario"],
+        "cargo": session["cargo"]
+    })    

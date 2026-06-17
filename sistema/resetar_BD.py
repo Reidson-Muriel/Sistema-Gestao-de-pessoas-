@@ -1,5 +1,5 @@
 import os
-from database.conexao import conectar, reset_BD, criar_tabela
+from sistema.database.conexao import conectar, reset_BD, criar_tabela
 
 modo = os.getenv("MODO") #ele pega o sistema em qual modo estara
 

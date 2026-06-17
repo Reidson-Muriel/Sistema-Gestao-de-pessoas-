@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("entrada").addEventListener("submit",
         async function (e) {
             e.preventDefault();
-            console.log("recarregando busca....")
             const id = document.getElementById("buscar").value;
 
             if (!id) {
@@ -24,8 +23,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const tbody = document.getElementById("busca_contato");
             tbody.innerHTML = "";
-
+            let botoes = "";
+            
+            const res = await fetch("/me");
+            const dado = await res.json();
+    
+            sessionStorage.setItem("cargo", dado.message.cargo);
+            const tipoUsuario = sessionStorage.getItem("cargo"); 
+            
+            if (tipoUsuario?.trim() === "admin") {
+                botoes = `
+                          <button class="btn btn-primary me-1" onclick="editar()">Editar</button>
+                          <button class="btn btn-danger " onclick="excluir(${contato.id})">Excluir</button>
+                         `;
+            } else {
+                botoes = ``;
+            }
             const tr = document.createElement("tr");
+
             tr.innerHTML = `
                         <td>${contato.id}</td>
                         <td>${contato.nome}</td>
@@ -36,13 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         <td>${contato.observacao}</td>    
                         <td>
                             <div class="acoes">
-                                <button class="btn btn-primary me-1" onclick="editar()">Editar</button>
-                                <button class="btn btn-danger " onclick="excluir(${contato.id})">Excluir</button>
+                                ${botoes}
                             </div>
                         </td>
             `;
             tbody.appendChild(tr);
         });
+
 
     window.editar = function () {
 
@@ -56,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nascimentoInput = document.getElementById("edit-nascimento");
 
         if (!nascimentoInput) {
-            console.log("O elemento nao encontrado!");
+            alert("O campo nascimento nao encontrado!");
             return;
         }
 
@@ -80,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const nascimentoInput = document.getElementById("edit-nascimento");
         if (!nascimentoInput) {
-            console.log("O campo nascimento nao encontrado!");
+            alert("O campo nascimento nao encontrado!");
             return;
         }
 
@@ -118,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             method: "DELETE"
         })
             .then(res => {
+                console.log("status:", res.status)
                 if (!res.ok) {
                     alert("Erro ao deletar");
                     return;
