@@ -42,7 +42,7 @@ def login():
     conn = conectar()
     cursor = conn.cursor()
 
-    cursor.execute("SELECT username, password, cargo from usuario where username = ?", (username,))
+    cursor.execute("SELECT id, username, password, cargo from usuario where username= ?", (username,))
     usuarios = cursor.fetchone()
     
     cursor.close()
@@ -51,11 +51,11 @@ def login():
     if not usuarios:
         return resp_erro("Usuario não encontrado!", 401)
     
-    if not check_password_hash(usuarios[1], password):
+    if not check_password_hash(usuarios[2], password):
         return resp_erro("Senha incorreta!", 401)
-
-    session["usuario"] = usuarios[0]
-    session["cargo"] = usuarios[2]
+    session["usuario_id"] = usuarios[0]
+    session["usuario"] = usuarios[1]
+    session["cargo"] = usuarios[3]
 
     if session["cargo"] == "admin":
         return resp_sucess("admin entrou", 200)

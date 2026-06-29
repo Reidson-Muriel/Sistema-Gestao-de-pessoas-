@@ -42,9 +42,9 @@ def criar_contato():
         if not dados:
             return resp_erro("dados invalidos", 400)
 
-        dados["usuario_id"] = session["usuario"]
+        dados["usuario_id"] = session["usuario_id"]
         
-        return adicionar_contato(dados)
+        return adicionar_contato(dados, session["cargo"])
     except Exception as e:
         return resp_erro("Erro ao criar contato " + str(e), 500)
      

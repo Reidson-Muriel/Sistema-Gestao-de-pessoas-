@@ -1,3 +1,4 @@
+
 ## isso aqui e tudo no banco de dados SQL
 from sistema.utils.logger import logger
 from sistema.database import conexao
@@ -40,55 +41,58 @@ def buscar_contato(id, usuario_id, cargo):
         cursor.close()
         conection.close()
 
-def adicionar_contato(dado):
+def adicionar_contato(dado, cargo):
 
 
     conection = conexao.conectar()
     cursor = conection.cursor()
-    try:
-        nome = dado.get("nome") 
-        telefone = dado.get("telefone")
-        email =  dado.get("email")
-        endereco = dado.get("endereco")
-        observacao = dado.get("observacao")
-        data_nascimento =  dado.get("data_nascimento")
-        usuario_id = dado.get("usuario_id")
-
-        if not nome or not telefone:
-            return resp_erro("Nome e telefone sao obrigatorios", 400)
-        
-        
-        if not validar_nome(nome):
-            return resp_erro("Nome invalido, deve ter pelo menos 3 caracteres em letras", 400)
-
-        
-        if not validar_telefone(telefone):
-            return resp_erro("Telefone invalido, deve conter apenas numeros de 11 digitos", 400)
-        
-        if not validar_email(email):
-            return resp_erro("Email invalido", 400)
-
-        
-
-
-        cursor.execute("select id from contatos where telefone= ?", (telefone,))#evitar o telefone duplas
-        existe = cursor.fetchone()
-        if existe:
-            return resp_erro("contato ja existe", 409)
-        else:
-            cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento, usuario_id) " \
-                           "values (?,?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento, usuario_id))
-            conection.commit()
-
-        return resp_sucess(message="Contato criado com sucesso", status=201)
+    if cargo != "admin":
+        return resp_erro("Acesso negado", 403)
+    else:
+        try:
+            nome = dado.get("nome") 
+            telefone = dado.get("telefone")
+            email =  dado.get("email")
+            endereco = dado.get("endereco")
+            observacao = dado.get("observacao")
+            data_nascimento =  dado.get("data_nascimento")
+            usuario_id = dado.get("usuario_id")
     
-    except Exception as e:
-        logger.error(f"Erro ao adicionar contato: {e}")
-        raise e
-
-    finally:
-        cursor.close()
-        conection.close()
+            if not nome or not telefone:
+                return resp_erro("Nome e telefone sao obrigatorios", 400)
+            
+            
+            if not validar_nome(nome):
+                return resp_erro("Nome invalido, deve ter pelo menos 3 caracteres em letras", 400)
+    
+            
+            if not validar_telefone(telefone):
+                return resp_erro("Telefone invalido, deve conter apenas numeros de 11 digitos", 400)
+            
+            if not validar_email(email):
+                return resp_erro("Email invalido", 400)
+    
+            
+    
+    
+            cursor.execute("select id from contatos where telefone= ?", (telefone,))#evitar o telefone duplas
+            existe = cursor.fetchone()
+            if existe:
+                return resp_erro("contato ja existe", 409)
+            else:
+                cursor.execute("insert into contatos (nome, telefone, email, endereco, observacao, data_nascimento, usuario_id) " \
+                               "values (?,?,?,?,?,?,?)",(nome, telefone, email or None, endereco or None, observacao or None,  data_nascimento, usuario_id))
+                conection.commit()
+    
+            return resp_sucess(message="Contato criado com sucesso", status=201)
+        
+        except Exception as e:
+            logger.error(f"Erro ao adicionar contato: {e}")
+            raise e
+    
+        finally:
+            cursor.close()
+            conection.close()
 
 def atualizar_contatos(id, dado):
     conection = conexao.conectar()
