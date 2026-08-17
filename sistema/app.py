@@ -52,7 +52,7 @@ def add_header(response):
     
 ## rota para exercutar no dispositivo moveis
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5500))
+    port = int(os.environ.get("PORT", 5000))
     if os.environ.get("PORT"):
         app.run(host="0.0.0.0", port=port, debug=False) #nosec
     else:
