@@ -32,8 +32,8 @@ Sistema web para gerenciamento de contatos com diferentes níveis de acesso entr
 Clone o projeto:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-cd SEU-REPOSITORIO
+git clone https://github.com/Reidson-Muriel/Sistema-Gestao-de-pessoas-.git
+cd Sistema-Gestao-de-pessoas-
 ```
 
 Crie o ambiente virtual:
@@ -77,5 +77,5 @@ python app.py
 Acesse:
 
 ```text
-http://127.0.0.1:5000
+http://127.0.0.1:8800
 ```
